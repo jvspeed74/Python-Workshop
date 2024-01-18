@@ -6,7 +6,7 @@ There are two programs in this submission:
 - Change Calculator (USD)
 - Temperature Conversion (Celcius, Fahrenheit, Kelvin)
 
----
+-
 ## Change Calculator
 
 
