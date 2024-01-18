@@ -7,7 +7,7 @@ There are two programs in this submission:
 - Temperature Conversion (Celcius, Fahrenheit, Kelvin)
 
 
-## Change Calculator
+# Change Calculator
 
 
 ### Purpose
@@ -97,7 +97,7 @@ The program can be split into modular components AKA functions. This would make 
 the user for inputs can lead to longer execution times. It would be quicker to store all values of tender and cost in
 separate arrays and iterate through them simultaneously.
 
-## Temperature Conversion
+# Temperature Conversion
 
 ### Purpose
 
