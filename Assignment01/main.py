@@ -15,25 +15,51 @@ tender_cost = {
 
 
 def get_change(tender, cost):
+    """
+    Calculates the difference between tender and cost
+    :param float tender:
+    :param float cost:
+    :return: tender minus cost rounded to two decimal places
+    :rtype: float
+    """
     return round(tender - cost, 2)
 
 
 def get_minimum_amount(value, deno, memo=None):
+    """
+    Finds the minimum amount of the set denomination required to reach zero using recursion
+    :param int value: Remaining change to find the minimum amount for
+    :param list deno: List of the denominations to use for recursion
+    :param dict memo: Memoization dictionary used to store results
+    :return: Dictionary with the count of each required denomination
+    :rtype: dict
+    """
+
+    # declare dict for memoization
     if memo is None:
         memo = defaultdict(int)
 
+    if value == 0:
+        return memo
+
+    # iterate through denominations
     for i in range(len(deno)):
         if value - deno[i] < 0:
             continue
 
         value -= deno[i]
         memo[deno[i]] += 1
-        return get_minimum_amount(value, deno, memo)
+        return get_minimum_amount(value, deno[i:], memo)
 
     return memo
 
 
 def get_answer(dollar_dict, coin_dict):
+    """
+    Formats and prints the minimum amount of dollars and coins
+    :param dict dollar_dict: Dictionary containing required dollar information
+    :param dict coin_dict: Dictionary containing required coin information
+    """
     for k, v in dollar_dict.items():
         print(f"${k} bills required: {v}")
 
@@ -42,6 +68,9 @@ def get_answer(dollar_dict, coin_dict):
 
 
 def main():
+    """
+    Iterates through test cases and prints the minimum amount of dollars and coins required.
+    """
     # iterate through each item in the test case
     for tender, cost in tender_cost.items():
         # print test case
