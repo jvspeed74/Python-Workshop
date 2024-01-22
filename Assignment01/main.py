@@ -1,20 +1,16 @@
 from collections import defaultdict
 
-# Find change
-# Find dollar amount
-# Find coin amount
-# Use recursion to subtract the highest dollar/coin value and store values in dict
-
 # declare denominations
 dollar_deno = [100, 50, 20, 10, 5, 1]
 coin_deno = [25, 10, 5, 1]
 
-# declare test cases
+# declare test cases:
+# {key: value} == {amount_tendered: item_cost}
 tender_cost = {
-    100:36.57,
-    80:64.09,
-    10:3.81,
-    50:14.36
+    100: 36.57,
+    80: 64.09,
+    10: 3.81,
+    50: 14.36
 }
 
 
@@ -46,13 +42,24 @@ def get_answer(dollar_dict, coin_dict):
 
 
 def main():
+    # iterate through each item in the test case
     for tender, cost in tender_cost.items():
+        # print test case
         print(f"Tender: ${tender}, Cost: ${cost}")
+
+        # calculate and print change
         change = get_change(tender, cost)
         print(f"Your change is ${change}")
+
+        # because of floating-point inaccuracies, split dollars and coins into separate integers
         dollars, coins = str(change).split(".")
         dollars, coins = int(dollars), int(coins)
+
+        # pass dollars, coins into recursive function get_minimum_amount which returns dict
+        # pass dict into get_answer to print answers in appropriate format
         get_answer(get_minimum_amount(dollars, dollar_deno), get_minimum_amount(coins, coin_deno))
+
+        # decorator between iterations
         print("============================")
 
 
