@@ -22,36 +22,19 @@ def get_change(tender, cost):
     return round(tender - cost, 2)
 
 
-def get_dollar_amount(dollars, memo=None):
+def get_minimum_amount(value, deno, memo=None):
     if memo is None:
         memo = defaultdict(int)
 
-    for i in range(len(dollar_deno)):
-        if dollars - dollar_deno[i] < 0:
+    for i in range(len(deno)):
+        if value - deno[i] < 0:
             continue
 
-        dollars -= dollar_deno[i]
-        memo[dollar_deno[i]] += 1
-        return get_dollar_amount(dollars, memo)
+        value -= deno[i]
+        memo[deno[i]] += 1
+        return get_minimum_amount(value, deno, memo)
 
-    for k, v in memo.items():
-        print(f"${k} bills required: {v}")
-
-
-def get_coin_amount(coins, memo=None):
-    if memo is None:
-        memo = defaultdict(int)
-
-    for i in range(len(coin_deno)):
-        if coins - coin_deno[i] < 0:
-            continue
-
-        coins -= coin_deno[i]
-        memo[coin_deno[i]] += 1
-        return get_coin_amount(coins, memo)
-
-    for k, v in memo.items():
-        print(f"{k}¢ required: {v}")
+    return memo
 
 
 def get_answer(dollar_dict, coin_dict):
@@ -59,17 +42,17 @@ def get_answer(dollar_dict, coin_dict):
         print(f"${k} bills required: {v}")
 
     for k, v in coin_dict.items():
-        print(f"{k}¢ cents required: {v}")
+        print(f"{k}¢ required: {v}")
 
 
 def main():
     for tender, cost in tender_cost.items():
         print(f"Tender: ${tender}, Cost: ${cost}")
         change = get_change(tender, cost)
-        print(f"Your change is $"'{:.2f}'.format(change))
+        print(f"Your change is ${change}")
         dollars, coins = str(change).split(".")
-        get_dollar_amount(int(dollars))
-        get_coin_amount(int(coins))
+        dollars, coins = int(dollars), int(coins)
+        get_answer(get_minimum_amount(dollars, dollar_deno), get_minimum_amount(coins, coin_deno))
         print("============================")
 
 
