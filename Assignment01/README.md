@@ -18,9 +18,9 @@ This script calculates the change for a transaction and denotes the required amo
 
 ### Type of Execution
 
-> Sequential Execution  
-> Conditional Execution  
-> Repeated Execution  
+Sequential Execution  
+Conditional Execution  
+Repeated Execution  
 
 ### Functions
 ```pycon
