@@ -6,20 +6,21 @@ There are two programs in this submission:
 - Change Calculator (USD)
 - Temperature Conversion (Celcius, Fahrenheit, Kelvin)
 
+## ========================================
+
 # Change Calculator
+
+## ========================================
 
 ### Purpose
 
 This script calculates the change for a transaction and denotes the required amount of each dollar and coin.
 
-### Type of Execution (Pseudocode)
+### Type of Execution
 
-> 1. Initialize denominations
-> 2. Declare test cases
-> 3. Calculate change
-> 4. Split change dollars and coins into separate integers
-> 5. Find minimum amount of dollars/coins using recursion
-> 6. Print the answer
+> Sequential Execution  
+> Conditional Execution  
+> Repeated Execution  
 
 ### Functions
 ```pycon
@@ -69,7 +70,7 @@ The script takes the following inputs:
 
 The denominations for dollars and coins are predefined within the script.
 
-### Expected Outputs
+### Outputs
 
 For each test case, the script outputs:
 
@@ -80,13 +81,20 @@ For each test case, the script outputs:
 
 ### Error Handling
 
-There are no error handling mechanisms found in the script. The test cases are guaranteed to work.
+- The package "Defaultdict" is imported to prevent an error for referencing
+a key that does not exist. 
+- Coin denomination is set as integers in order to prevent floating point inaccuracies.
+- Debugging was only done with the **given** test cases.
 
 ### Possible Improvements
 
 - Implementation of more test cases to understand where bugs arise.
 
+## ========================================
+
 # Temperature Conversion
+
+## ========================================
 
 ### Purpose
 
@@ -98,7 +106,7 @@ Calculate the temperature for the given scale.
 - Kelvin: float = 329.7
 - Celsius: float = -60.9
 
-### Expected Outputs
+### Outputs
 
 - Fahrenheit to Celsius conversion
 - Kelvin to Fahrenheit conversion
@@ -121,12 +129,12 @@ The final output of the program:
 212.1 degrees Kelvin
 ```
 
-### Types of Execution (Pseudocode)
+### Types of Execution
 
-> Declare variables based from conversion formulas  
-> Display answers
+- Sequential Execution
 
 ### Error Handling
+
 - None
 
 ### Possible Improvements
