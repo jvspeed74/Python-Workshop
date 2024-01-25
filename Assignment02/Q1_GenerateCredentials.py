@@ -1,4 +1,11 @@
-def get_credentials(first_name, middle_name, last_name, phone_number):
+def get_credentials(first_name: str, middle_name: str | None, last_name: str, phone_number: str) -> None:
+    """
+    This function generates a username and password based on parameters
+    :param first_name:
+    :param middle_name:
+    :param last_name:
+    :param phone_number:
+    """
     print("Getting credentials for", first_name, last_name)
 
     # username
@@ -18,7 +25,10 @@ def get_credentials(first_name, middle_name, last_name, phone_number):
     section_decorator()
 
 
-def section_decorator():
+def section_decorator() -> None:
+    """
+    This function prints a decorator
+    """
     print("=" * 15)
 
 
@@ -36,5 +46,3 @@ def main():
 
 
 main()
-
-
