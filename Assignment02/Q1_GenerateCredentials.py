@@ -33,6 +33,9 @@ def section_decorator() -> None:
 
 
 def main():
+    """
+    This function will find and print the credentials of students separated by a decorator
+    """
     # Students:
     # Linus Benedict Torvalds, (317)-555-1969
     # Alan Mathison Turing, (317)-555-5346
