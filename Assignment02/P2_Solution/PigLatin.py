@@ -7,7 +7,7 @@ def convert_to_piglatin(word: str) -> None:
     """
 
     # decorator and script formatting
-    print("=" * 15)
+    print("=" * 30)
     print(f"Word: {word}")
     print(f"Piglatin: ", end="")
 
