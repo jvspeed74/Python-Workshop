@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8c54124-cad8-43a4-8b30-908791e531b3" name="TODO" comment="Adjusted logic">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="61c65008-3a13-4ccf-b68a-6e8bbcd54c13" name="Documentation" comment="Adjusted documentation for PigLatin" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="InstanceColorv3">
+    <option name="map">
+      <map>
+        <entry key="$PROJECT_DIR$/Writerside/h.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="1" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="60" />
+                  <option name="darkBlue" value="60" />
+                  <option name="darkGreen" value="68" />
+                  <option name="darkRed" value="206" />
+                  <option name="green" value="68" />
+                  <option name="red" value="206" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="65" />
+                  <option name="darkBlue" value="65" />
+                  <option name="darkGreen" value="126" />
+                  <option name="darkRed" value="231" />
+                  <option name="green" value="126" />
+                  <option name="red" value="231" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2bMWM6pYxESIpFseqnr9K2UR9L1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.GenerateCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PigLatin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Q1_GenerateCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Q2_PigLatin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pay_rate_calculator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;writerside.last.selected.productB210&quot;: &quot;h&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Assignment02/Q2" />
+      <recent name="$PROJECT_DIR$/Assignment02/Q1" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="Default" summary="Default task">
+      <changelist id="61c65008-3a13-4ccf-b68a-6e8bbcd54c13" name="Changes" comment="" />
+      <created>1706025377847</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706330444881</updated>
+      <workItem from="1706025379106" duration="2186000" />
+      <workItem from="1706027904476" duration="4368000" />
+      <workItem from="1706117790698" duration="27258000" />
+      <workItem from="1706330429656" duration="16000" />
+    </task>
+    <task id="LOCAL-00001" summary="Updated Assignment 1 README.md">
+      <option name="closed" value="true" />
+      <created>1706027807465</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706027807465</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated q2 variable names">
+      <option name="closed" value="true" />
+      <created>1706028375516</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706028375516</updated>
+    </task>
+    <task id="LOCAL-00003" summary="finished lab2">
+      <option name="closed" value="true" />
+      <created>1706196693192</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706196693192</updated>
+    </task>
+    <task id="LOCAL-00004" summary="started assignment 02; finished question 1">
+      <option name="closed" value="true" />
+      <created>1706199707066</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706199707066</updated>
+    </task>
+    <task id="LOCAL-00005" summary="question 1 documentation">
+      <option name="closed" value="true" />
+      <created>1706200651674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706200651674</updated>
+    </task>
+    <task id="LOCAL-00006" summary="question 1 documentation">
+      <option name="closed" value="true" />
+      <created>1706200778998</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706200778998</updated>
+    </task>
+    <task id="LOCAL-00007" summary="question 2 complete">
+      <option name="closed" value="true" />
+      <created>1706296641848</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706296641848</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Code Editing">
+      <changelist id="f8c54124-cad8-43a4-8b30-908791e531b3" name="TODO" comment="refactored file directories" />
+      <created>1706329756663</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706633630054</updated>
+      <workItem from="1706329756933" duration="633000" />
+      <workItem from="1706633615153" duration="15000" />
+    </task>
+    <task id="LOCAL-00009" summary="Added markdown files for assignment 2 directories">
+      <option name="closed" value="true" />
+      <created>1706329868069</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706329868069</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactoring">
+      <option name="closed" value="true" />
+      <created>1706330095770</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706330095770</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactoring with new directories">
+      <option name="closed" value="true" />
+      <created>1706330138672</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706330138672</updated>
+    </task>
+    <task active="true" id="LOCAL-00012" summary="TODO">
+      <changelist id="f8c54124-cad8-43a4-8b30-908791e531b3" name="TODO" comment="" />
+      <created>1706330390522</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706633630054</updated>
+      <workItem from="1706330390606" duration="39000" />
+      <workItem from="1706330445671" duration="3528000" />
+      <workItem from="1706494834289" duration="94000" />
+      <workItem from="1706494934338" duration="841000" />
+      <workItem from="1706495783962" duration="1071000" />
+      <workItem from="1706543609991" duration="44000" />
+      <workItem from="1706628983896" duration="1510000" />
+      <workItem from="1706630505417" duration="665000" />
+      <workItem from="1706632994270" duration="619000" />
+      <workItem from="1706633630191" duration="7968000" />
+      <workItem from="1706653564656" duration="333000" />
+    </task>
+    <task id="LOCAL-00013" summary="added get_payment function">
+      <option name="closed" value="true" />
+      <created>1706629950311</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706629950311</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactored file directories">
+      <option name="closed" value="true" />
+      <created>1706630147035</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706630147035</updated>
+    </task>
+    <task id="LOCAL-00015" summary="throws exception if user input is negative">
+      <option name="closed" value="true" />
+      <created>1706635356017</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706635356017</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Adjusted logic">
+      <option name="closed" value="true" />
+      <created>1706648220224</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1706648220224</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Adjusted documentation for PigLatin">
+      <option name="closed" value="true" />
+      <created>1706648478896</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1706648478896</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <option name="trackContextForNewChangelist" value="true" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <confirmRemoveEmptyChangelist value="1" />
+    <MESSAGE value="Updated Assignment 1 README.md" />
+    <MESSAGE value="updated q2 variable names" />
+    <MESSAGE value="finished lab2" />
+    <MESSAGE value="started assignment 02; finished question 1" />
+    <MESSAGE value="question 1 documentation" />
+    <MESSAGE value="question 2 complete" />
+    <MESSAGE value="Added markdown files for assignment 2 directories" />
+    <MESSAGE value="Code Editing" />
+    <MESSAGE value="Refactoring with new directories" />
+    <MESSAGE value="TODO" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="added get_payment function" />
+    <MESSAGE value="refactored file directories" />
+    <MESSAGE value="throws exception if user input is negative" />
+    <MESSAGE value="Adjusted logic" />
+    <MESSAGE value="Adjusted documentation for PigLatin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted documentation for PigLatin" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/B210$Q1_GenerateCredentials.coverage" NAME="Q1_GenerateCredentials Coverage Results" MODIFIED="1706327971117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment02/Q1" />
+    <SUITE FILE_PATH="coverage/B210$Q2_PigLatin.coverage" NAME="Q2_PigLatin Coverage Results" MODIFIED="1706328460285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment02/Q2" />
+    <SUITE FILE_PATH="coverage/B210$test.coverage" NAME="test Coverage Results" MODIFIED="1706030866340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment01" />
+    <SUITE FILE_PATH="coverage/B210$GenerateCredentials.coverage" NAME="GenerateCredentials Coverage Results" MODIFIED="1706630307518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment02/p1_solution" />
+    <SUITE FILE_PATH="coverage/B210$PigLatin.coverage" NAME="PigLatin Coverage Results" MODIFIED="1706647954138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment02/p2_solution" />
+    <SUITE FILE_PATH="coverage/B210$main.coverage" NAME="main Coverage Results" MODIFIED="1706629824928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inclass" />
+    <SUITE FILE_PATH="coverage/B210$pay_rate_calculator.coverage" NAME="pay_rate_calculator Coverage Results" MODIFIED="1706633317831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inclass" />
+  </component>
+</project>
