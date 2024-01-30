@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8c54124-cad8-43a4-8b30-908791e531b3" name="TODO" comment="Adjusted logic">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inclass/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/inclass/test.ipynb" afterDir="false" />
     </list>
     <list id="61c65008-3a13-4ccf-b68a-6e8bbcd54c13" name="Documentation" comment="Adjusted documentation for PigLatin" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -251,7 +249,7 @@
       <workItem from="1706630505417" duration="665000" />
       <workItem from="1706632994270" duration="619000" />
       <workItem from="1706633630191" duration="7968000" />
-      <workItem from="1706653564656" duration="333000" />
+      <workItem from="1706653564656" duration="671000" />
     </task>
     <task id="LOCAL-00013" summary="added get_payment function">
       <option name="closed" value="true" />
@@ -293,7 +291,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706648478896</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Adjusted logic">
+      <option name="closed" value="true" />
+      <created>1706653984311</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1706653984311</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adjusted logic">
+      <option name="closed" value="true" />
+      <created>1706654209996</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1706654209996</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
@@ -327,9 +341,9 @@
     <MESSAGE value="added get_payment function" />
     <MESSAGE value="refactored file directories" />
     <MESSAGE value="throws exception if user input is negative" />
-    <MESSAGE value="Adjusted logic" />
     <MESSAGE value="Adjusted documentation for PigLatin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted documentation for PigLatin" />
+    <MESSAGE value="Adjusted logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted logic" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
