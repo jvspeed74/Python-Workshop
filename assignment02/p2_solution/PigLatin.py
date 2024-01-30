@@ -1,8 +1,7 @@
 def convert_to_piglatin(word: str) -> None:
     """
-    Prints an input word converted to piglatin.
-    Every vowel before the first consonant is moved to the end of the word.
-    Every word is appended with "ay"
+    Converts a word to Pig Latin by continuously moving the leading character to the end of the word
+    until the character being moved is a consonant.
     :param word:
     """
 
@@ -18,15 +17,14 @@ def convert_to_piglatin(word: str) -> None:
     # loop through characters
     for i in range(len(word)):
 
-        # return if letter not a vowel
-        if word[i] not in vowels:
-            return print(word[i:] + stack + "ay")
-
-        # add letter to stack
         stack += word[i]
 
-    # all letters in word are vowels
-    print(word + "ay")
+        # return if letter not in vowels
+        if word[i] not in vowels:
+            print(word[i+1:] + stack + "ay")
+            break
+
+    return
 
 
 def main():
