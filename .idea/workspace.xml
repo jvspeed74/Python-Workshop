@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8c54124-cad8-43a4-8b30-908791e531b3" name="TODO" comment="Adjusted logic">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inclass/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/inclass/test.ipynb" afterDir="false" />
-    </list>
-    <list id="61c65008-3a13-4ccf-b68a-6e8bbcd54c13" name="Documentation" comment="Adjusted documentation for PigLatin" />
+    <list default="true" id="f0dd660d-1d64-481c-92d0-286614a72b70" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,34 +83,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.GenerateCredentials.executor": "Run",
-    "Python.PigLatin.executor": "Run",
-    "Python.Q1_GenerateCredentials.executor": "Run",
-    "Python.Q2_PigLatin.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.pay_rate_calculator.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true",
-    "writerside.last.selected.productB210": "h"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.GenerateCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PigLatin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Q1_GenerateCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Q2_PigLatin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pay_rate_calculator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;writerside.last.selected.productB210&quot;: &quot;h&quot;
   },
-  "keyToStringList": {
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": [
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Assignment02/Q2" />
@@ -130,16 +126,18 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="Default" summary="Default task">
-      <changelist id="61c65008-3a13-4ccf-b68a-6e8bbcd54c13" name="Changes" comment="" />
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="" name="Changes" comment="" />
       <created>1706025377847</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1706330444881</updated>
+      <updated>1706668808946</updated>
       <workItem from="1706025379106" duration="2186000" />
       <workItem from="1706027904476" duration="4368000" />
       <workItem from="1706117790698" duration="27258000" />
       <workItem from="1706330429656" duration="16000" />
+      <workItem from="1706668773978" duration="28000" />
+      <workItem from="1706668809063" duration="111000" />
     </task>
     <task id="LOCAL-00001" summary="Updated Assignment 1 README.md">
       <option name="closed" value="true" />
@@ -197,16 +195,6 @@
       <option name="project" value="LOCAL" />
       <updated>1706296641848</updated>
     </task>
-    <task id="LOCAL-00008" summary="Code Editing">
-      <changelist id="f8c54124-cad8-43a4-8b30-908791e531b3" name="TODO" comment="refactored file directories" />
-      <created>1706329756663</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1706633630054</updated>
-      <workItem from="1706329756933" duration="633000" />
-      <workItem from="1706633615153" duration="15000" />
-    </task>
     <task id="LOCAL-00009" summary="Added markdown files for assignment 2 directories">
       <option name="closed" value="true" />
       <created>1706329868069</created>
@@ -230,26 +218,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1706330138672</updated>
-    </task>
-    <task active="true" id="LOCAL-00012" summary="TODO">
-      <changelist id="f8c54124-cad8-43a4-8b30-908791e531b3" name="TODO" comment="" />
-      <created>1706330390522</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1706633630054</updated>
-      <workItem from="1706330390606" duration="39000" />
-      <workItem from="1706330445671" duration="3528000" />
-      <workItem from="1706494834289" duration="94000" />
-      <workItem from="1706494934338" duration="841000" />
-      <workItem from="1706495783962" duration="1071000" />
-      <workItem from="1706543609991" duration="44000" />
-      <workItem from="1706628983896" duration="1510000" />
-      <workItem from="1706630505417" duration="665000" />
-      <workItem from="1706632994270" duration="619000" />
-      <workItem from="1706633630191" duration="7968000" />
-      <workItem from="1706653564656" duration="671000" />
-      <workItem from="1706654245300" duration="223000" />
     </task>
     <task id="LOCAL-00013" summary="added get_payment function">
       <option name="closed" value="true" />
@@ -315,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706654261668</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Adjusted logic">
+      <option name="closed" value="true" />
+      <created>1706661615813</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1706661615813</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
@@ -347,23 +323,12 @@
     <MESSAGE value="TODO" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="added get_payment function" />
-    <MESSAGE value="refactored file directories" />
     <MESSAGE value="throws exception if user input is negative" />
-    <MESSAGE value="Adjusted documentation for PigLatin" />
     <MESSAGE value="Adjusted logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted logic" />
+    <MESSAGE value="refactored file directories" />
+    <MESSAGE value="Adjusted documentation for PigLatin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted documentation for PigLatin" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/B210$Q1_GenerateCredentials.coverage" NAME="Q1_GenerateCredentials Coverage Results" MODIFIED="1706327971117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assignment02/Q1" />
