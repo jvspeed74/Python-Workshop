@@ -1,5 +1,4 @@
 def get_input() -> float:
-
     # get user input
     user_input = input("Enter your grade percentage as a decimal: ")
 
@@ -18,4 +17,38 @@ def get_input() -> float:
     return user_input
 
 
-get_input()
+def calculate_grade(percentage: float) -> None:
+    print("Grade: ", end="")
+    if percentage >= 0.97:
+        print("A+")
+    elif percentage >= 0.93:
+        print("A")
+    elif percentage >= 0.9:
+        print("A-")
+    elif percentage >= 0.87:
+        print("B+")
+    elif percentage >= 0.83:
+        print("B")
+    elif percentage >= 0.8:
+        print("B-")
+    elif percentage >= 0.77:
+        print("C+")
+    elif percentage >= 0.73:
+        print("C")
+    elif percentage >= 0.7:
+        print("C-")
+    elif percentage >= 0.67:
+        print("D+")
+    elif percentage >= 0.63:
+        print("D")
+    elif percentage >= 0.6:
+        print("D-")
+    else:
+        print("F")
+
+
+def main():
+    calculate_grade(get_input())
+
+
+main()
