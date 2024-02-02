@@ -1,4 +1,10 @@
-def get_input() -> float:
+def get_percentage() -> float:
+    """
+    Prompts the user to enter a decimal between 0 and 1. The program will validate and return the
+    input as a float.
+    :return: User input as a float.
+    :rtype: float
+    """
     # get user input
     user_input = input("Enter your grade percentage as a decimal: ")
 
@@ -9,7 +15,7 @@ def get_input() -> float:
             raise Exception(f"Invalid percentage: \'{user_input}\' => Value between 0 and 1 expected.")
 
     except ValueError:  # conversion error
-        exit(f'Invalid input: \'{user_input}\' => Expected numerical characters')
+        exit(f'Invalid input: \'{user_input}\' => Expected input consisting of only number and decimal characters.')
     except Exception as error:  # percentage out-of-bounds error
         exit(error)
 
@@ -17,8 +23,16 @@ def get_input() -> float:
     return user_input
 
 
-def calculate_grade(percentage: float) -> None:
+def calculate_letter_grade(percentage: float) -> None:
+    """
+    Prints the overall letter grade based from percentage conditional.
+    :param percentage: Numerical input between 0 and 1 representing the grade percentage.
+    :type percentage: float
+    """
+    # formatter
     print("Grade: ", end="")
+
+    # find numerical band that percentage resides in
     if percentage >= 0.97:
         print("A+")
     elif percentage >= 0.93:
@@ -48,7 +62,10 @@ def calculate_grade(percentage: float) -> None:
 
 
 def main():
-    calculate_grade(get_input())
+    """
+    Main function to execute the program. Calculates and prints the letter grade based on the user's input percentage.
+    """
+    calculate_letter_grade(get_percentage())
 
 
 main()
