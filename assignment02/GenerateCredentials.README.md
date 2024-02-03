@@ -35,7 +35,6 @@ Password: Lieei1969
 
 - Sequential Execution
 - Conditional Execution  
-- Repeated Execution
 
 ### How could your program be improved?
 
