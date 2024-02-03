@@ -1,19 +1,21 @@
 # Calendar Display Program
 
-This Python script utilizes the `calendar` module to display formatted calendar data for a specified month in the Gregorian calendar.
+`gregorian_calendar.py` is a Python script that utilizes the `calendar` module to display formatted calendar data for a
+specified month in the Gregorian calendar.
 
 ### Purpose
 
 The program serves the following purposes:
 
 1. **User Input Handling:**
-   - Prompt users to enter a full month name found in the Gregorian calendar.
-   - Validate the input against a predefined dictionary (`month_dict`).
-   - Raise an exception if the entered month is not in the calendar.
+    - Prompt users to enter a full month name found in the Gregorian calendar.
+    - Validate the input against a predefined dictionary (`month_dict`).
+    - Raise an exception if the entered month is not in the calendar.
 
 2. **Calendar Display:**
-   - Utilize the `calendar` module to display the calendar and additional information for the specified month.
-   - Print the number of days in the month.
+    - Utilize the `calendar` module to display the calendar and additional information for the specified month.
+    - Print the number of days in the month.
+    - No installation needed. Module comes pre-packaged in the Python interpreter. 
 
 ### Input
 
@@ -23,7 +25,8 @@ The program takes the following input:
 
 ### Expected Output
 
-Upon successful execution, the program prints the formatted calendar for the specified month, including the number of days in the month.
+Upon successful execution, the program prints the formatted calendar for the specified month, including the number of
+days in the month.
 
 ```
 ==============================
@@ -45,17 +48,17 @@ January had 31 days in 2023!
 The program involves the following types of execution:
 
 - **Sequential Execution:**
-  - The main function (`main()`) orchestrates the flow, calling other functions sequentially.
+    - The main function (`main()`) orchestrates the flow, calling other functions sequentially.
 
 - **Exception Handling (Conditional Execution):**
-  - The program handles exceptions when the entered month is not found in the predefined dictionary (`month_dict`).
+    - The program handles exceptions when the entered month is not found in the predefined dictionary (`month_dict`).
 
 ### Potential Improvements
 
 The program could be enhanced in the following ways:
 
 1. **Input Flexibility:**
-   - Allow users to input abbreviated month names for increased flexibility.
+    - Allow users to input abbreviated month names for increased flexibility.
 
 2. **Year Flexibility:**
-   - Allow users to specify the year for which they want to display the calendar.
+    - Allow users to specify the year for which they want to display the calendar.

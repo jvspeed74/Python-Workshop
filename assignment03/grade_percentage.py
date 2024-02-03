@@ -11,13 +11,13 @@ def get_percentage() -> float:
     try:
         # convert input to a float that's between 0 and 1
         user_input = float(user_input)
-        if user_input < 0 or user_input > 1:
-            raise Exception(f"Invalid percentage: \'{user_input}\' => Value between 0 and 1 expected.")
 
-    except ValueError:  # conversion error
-        exit(f'Invalid input: \'{user_input}\' => Expected input consisting of only number and decimal characters.')
-    except Exception as error:  # percentage out-of-bounds error
-        exit(error)
+    except ValueError as e:  # conversion error
+        exit(f'Invalid input: {e} ==> Expected input consisting of only numbers and decimal characters.')
+
+    # percentage out-of-bounds error
+    if user_input < 0 or user_input > 1:
+        exit(f"Invalid percentage: \'{user_input}\' ==> Value between 0 and 1 expected.")
 
     # validated float between 0 and 1
     return user_input
@@ -29,7 +29,8 @@ def calculate_letter_grade(percentage: float) -> None:
     :param percentage: Numerical input between 0 and 1 representing the grade percentage.
     :type percentage: float
     """
-    # formatter
+    # opening wrapper
+    print('=' * 10)
     print("Grade: ", end="")
 
     # find numerical band that percentage resides in
@@ -59,6 +60,9 @@ def calculate_letter_grade(percentage: float) -> None:
         print("D-")
     else:
         print("F")
+
+    # closing wrapper
+    print('=' * 10)
 
 
 def main():

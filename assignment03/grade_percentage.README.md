@@ -26,20 +26,11 @@ The program takes the following input:
 
 Upon successful execution, the program prints the calculated letter grade corresponding to the user-provided percentage.
 
-#### Test cases
-
-```pycon
+```
 Input -> Output
 ---------------
-0.75 -> "Grade: C" 
-
-75 -> "Invalid percentage: '75' => Value between 0 and 1 expected."
-
-0.8995 -> "Grade: B+"
-
--0.25 -> "Invalid percentage: '-0.25' => Value between 0 and 1 expected."
-
-A -> "Invalid input: 'A' => Expected input consisting of only number and decimal characters."
+0.75 -> "Grade: C"
+A -> "Invalid input: 'could not convert string to float: 'A' ==> Expected input consisting of only number and decimal characters."
 ```
 
 ### Type of Execution
@@ -58,7 +49,8 @@ The program involves the following types of execution:
 The program could be enhanced in the following ways:
 
 1. **Improved Input Handling:**
-    - The introduction of a 'While True' loop would allow for users to attempt multiple inputs without the script exiting abruptly.
+    - The introduction of a 'While True' loop would allow for users to input multiple grades, stopping the script on
+      their own accord.
 
 2. **Flexibility in Input Format:**
     - Allow users to input grades in percentage format (e.g., 85%) in addition to decimal form.
