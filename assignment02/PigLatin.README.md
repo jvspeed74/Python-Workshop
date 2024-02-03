@@ -30,8 +30,7 @@ Piglatin: implesay
 
 - Sequential Execution
 - Conditional Execution  
-- Repeated Execution
-
+  
 ### How could your program be improved?
 
 - Handling uppercase letters and maintaining the case in the Pig Latin output.
