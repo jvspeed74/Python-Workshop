@@ -69,8 +69,9 @@ def calculate_GCF(a, b):
 
 
 def main():
-    # welcome statement
+    # TODO: Add welcome function. Possibly add colorama.
     while True:
+        # TODO: Remove 'Stop' from get_mode_type and add break clause to main loop
         mode = get_mode_type()
 
         if mode == 'STOP':
@@ -80,9 +81,9 @@ def main():
         first_num, second_num = get_two_int()
 
         if mode == 'LCM':
-            pass
+            print(f"The LCM for {first_num} and {second_num} is: {calculate_LCM(first_num, second_num)}")
         else:  # GCF
-            pass
+            print(f"The GCF for {first_num} and {second_num} is: {calculate_GCF(first_num, second_num)}")
 
 
 main()
