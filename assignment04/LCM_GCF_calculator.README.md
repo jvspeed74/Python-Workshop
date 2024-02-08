@@ -15,6 +15,13 @@ The program takes the following inputs:
 These inputs are case-insensitive in order to provide accessibility for users.
 
 ```pycon
+mode_type = input("Enter 'LCM' or 'GCF': ").upper()
+
+# check/return if user input is valid
+valid_modes = ['LCM', 'GCF']  # list of acceptable inputs
+```
+
+```pycon
 if input("Enter 'Stop' to exit the script: ").upper() == 'STOP':
     print('Exiting... Goodbye!')
 ```
@@ -62,4 +69,4 @@ The program involves the following types of execution:
 The program could be improved in the following ways:
 
 1. Additional Numeric Inputs: Allow users to perform calculations on a integer count greater than two.
-2. Standardized Decorator Functionality: Cleaning up `main()` by using Python's built-in configuration for decorators.
+2. Refactor Decorators: Cleaning up `main()` by using Python's built-in configuration for decorators.
