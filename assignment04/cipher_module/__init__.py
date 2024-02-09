@@ -4,6 +4,15 @@ __author__ = 'Jalen Vaughn'
 __url__ = ''  # TODO: ADD GITHUB URL
 
 
+def print_section_header(header=None):
+    if not header:
+        print("=" * 50)
+    else:
+        width = 50
+        padding = (width - len(header)) // 2
+        print("=" * padding, header, "=" * padding)
+
+
 class PassageManager:
     def __init__(self):
         self.library = {
@@ -37,8 +46,11 @@ class PassageManager:
         }
 
     def display_library(self):
+        print("Options:")
         for k in self.library.keys():
-            print(k)
+            print("- ", k)
+
+        print_section_header("")
 
 
 class TextScraper(PassageManager):
@@ -46,6 +58,7 @@ class TextScraper(PassageManager):
         super().__init__()
         self.active_text: str = ""
         self.active_char: str = ""
+        self.char_count: int = 0
 
     def set_active_text(self):
         self.display_library()
@@ -80,6 +93,10 @@ class TextScraper(PassageManager):
 
         # set value
         self.active_char = user_input
+
+    def search_char(self):
+        # Call the passage from the library and return the count the character appears
+        self.char_count = self.library[self.active_text].count(self.active_char)
 
     def get_char_count(self) -> int:
         return self.char_count
