@@ -82,5 +82,10 @@ class TextScraper(PassageManager):
         self.active_char = user_input
 
     def get_char_count(self) -> int:
-        # Call the passage from the library and return the count the character appears
-        return self.library[self.active_text].count(self.active_char)
+        return self.char_count
+
+    def get_active_text(self) -> str:
+        return self.active_text
+
+    def get_active_char(self) -> str:
+        return self.active_char
