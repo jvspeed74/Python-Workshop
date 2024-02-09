@@ -1,3 +1,5 @@
+# TODO: Add documentation for script and readme
+# TODO: Add correct error messages
 from passage_data import passages
 
 
@@ -8,6 +10,7 @@ class TextScraper:
         self.active_char: str = ""
 
     def set_active_text(self):
+        # TODO: Display list of available passages to search
         # get input
         while True:
             user_input = input("Enter the passage name to search ")
@@ -40,10 +43,12 @@ class TextScraper:
         self.active_char = user_input
 
     def get_char_count(self) -> int:
+        # TODO: Add comment
         return self.library[self.active_text].count(self.active_char)
 
 
 def main():
+    # TODO: Add decorators to program
     text_scraper = TextScraper(passages)
     while True:
         text_scraper.set_active_text()
