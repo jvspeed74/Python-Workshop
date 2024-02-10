@@ -1,16 +1,62 @@
-Cryptography is the study of how data is encrypted and decrypted. One of the most basic types of encryption is a cipher,
-where each character is replaced with another character. A common technique in analyzing such a cipher is counting the
-number of occurrences contained in the acquired messages. This works as a clue to the cipher, because while the letters
-have changed their frequency and the syntax of the encoded language hasn’t. Write a program that takes two inputs: a
-passage of at least 200 characters, and a character. The program should then scan the passage for number of occurrences
-of the specified character. If the character is not contained in the passage, the program should prompt the user to ask
-the user to give another character. If the user uses a passage of insufficient size the program should inform them that
-the number of characters contained in their passage and prompt them to enter another passage. (40 points)
+# Cipher
 
-“The Raven” by Edgar Allan Poe Paragraph 7, “e”
+## Purpose
 
-“Fire and Ice” by Robert Frost, “i”
+The `cipher.py` script serves two main purposes:
 
-“Awaking in New York” by Maya Angelou, “x”
+1. **Passage Manager**: Stores passages along with their titles and provides a method to display available passages.
+2. **Text Scraper**: Allows users to search for a specific character within a selected passage and returns the count of
+   occurrences.
 
-“I’m thankful that my life doth not deceive” by Henry David Thoreau, “?”
+## Input
+
+The program takes the following inputs:
+
+- Selection of a passage title from the available library.
+- A single character to search for within the chosen passage.
+
+## Expected Output
+
+Upon successful execution, the program returns the count of occurrences of the specified character within the selected
+passage.
+
+```
+=================== Select Text ===================
+Options:
+-  The Raven
+-  Fire and Ice
+-  Awaking in New York
+-  I'm thankful that my life doth not deceive
+==================================================
+Enter the passage name to search: Fire and Ice
+=================== Fire and Ice ===================
+Enter a character to search for f
+====================== Result ======================
+Your character 'f' occurs 9 time(s)
+```
+
+## Type of Execution
+
+- Sequential Execution
+- Conditional Execution
+- Repeated Execution
+
+## Overview of Classes and Functions
+
+- **PassageManager**: Manages passages and provides methods to display passage titles.
+    - __init__(): Initializes the library of passages.
+    - display_library(): Prints out the titles of available passages.
+- **TextScraper**: Inherits from PassageManager and allows searching for characters within passages.
+    - __init__(): Initializes attributes related to the active text and character.
+    - set_active_text(): Sets the active text based on user input.
+    - set_active_char(): Sets the active character based on user input.
+    - search_char(): Counts the occurrences of the active character within the active text.
+    - get_char_count(): Returns the count of character occurrences.
+    - get_active_text(): Returns the title of the active text.
+    - get_active_char(): Returns the active character.
+- **print_header()**: Prints a header with a given text.
+
+## Potential Improvements
+
+1. The ability to add, edit, or delete passages in the library.
+2. Scanning the passage for the count of all characters in a sorted array.
