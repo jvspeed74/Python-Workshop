@@ -1,4 +1,16 @@
+"""
+Name:
+Description:
+Imports: print_header function from utils
+"""
+from utils import print_header
+
+
 class PassageManager:
+    """
+    Manages passages and provides methods to display passage titles.
+    """
+
     def __init__(self):
         # passage storage
         self.library = {
@@ -91,6 +103,10 @@ class PassageManager:
 
 
 class TextScraper(PassageManager):
+    """
+    Inherits from PassageManager and allows searching for characters within passages.
+    """
+
     def __init__(self):
         super().__init__()
         self.passage: str = ""  # passage being search through
@@ -153,65 +169,16 @@ class TextScraper(PassageManager):
         self.char_count = self.library[self.passage].count(self.character)
 
     def print_result(self) -> None:
+        """
+        Prints the result in a specific format that calls the character, passage, and char_count attributes.
+        """
         print_header("Result")
         print(f"'{self.character}' occurs {self.char_count} time(s) in {self.passage}")
 
     def get_char_count(self) -> int:
+        """
+        Getter: self.char_count
+        :return: the amount of times the character appears in the text
+        :rtype: int
+        """
         return self.char_count
-
-
-def print_header(header=None) -> None:
-    """
-    Prints a header to the console with a given text inside
-    :param header: Optional string to use for the text inside the header.
-    """
-    if header is None:
-        print("=" * 50)
-
-    else:  # calculate the correct amount of "=" and dead space to properly fit header in the center
-        width = 50  # total size
-        padding = (width - len(header)) // 2  # the amount of "=" signs to put on both sides
-        print("=" * padding, header, "=" * padding)
-
-
-def main():
-    """
-    Main Program:
-    1. Creates a TextScraper object, which is a subclass of PassageManager, that allows you to search for
-    character occurrence in a passage.
-    2. Prompts user to select a passage name and a single character to observe. Or grants the user to add a passage of
-    their own.
-    3. If the specified character is unable to be found, the program will prompt the user to enter another character.
-    4. The program will display the amount of times the character occurs and end.
-    """
-    # welcome statement
-    print_header("Cipher")
-    print("Welcome! This program allows the user to enter a    \n"
-          "passage name and a single character. The number of  \n"
-          "times the character appears is calculated and       \n"
-          "displayed! A new feature is the ability to add your \n"
-          "own passage to the library. See below :D")
-
-    # initialize library handler and text scraper
-    text_scraper = TextScraper()
-
-    # prompt user for passage name
-    text_scraper.set_passage()
-
-    # infinite loop: repeats until a character is found in text
-    while True:
-        # get char from user and search text
-        text_scraper.set_character()
-        text_scraper.search_passage()
-
-        # check if character doesn't occur
-        if not text_scraper.get_char_count():
-            print("Character not found in text. Try another!")
-            continue
-
-        # all requirements met
-        text_scraper.print_result()
-        break
-
-
-main()

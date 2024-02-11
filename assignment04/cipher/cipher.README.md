@@ -2,7 +2,13 @@
 
 ## Purpose
 
-The `cipher.py` script serves two main purposes:
+For organization purposes, this module is split into 3 separate files:
+
+- `passage_manager.py`: Contains the 'PassageManager' and 'TextScraper' classes
+- `utils.py`: Contains miscellaneous function tools.
+- `main.py`: Contains the main script which serves the main purposes.
+
+The Cipher module serves two main purposes:
 
 1. **Passage Manager**: Stores passages along with their titles and provides a method to display available passages.
    Users are able to add passages with select constraints.
