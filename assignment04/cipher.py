@@ -35,7 +35,7 @@ class PassageManager:
         """
         Prints out the title of each passage in a list format.
         """
-        print("Options:")
+        print("Library:")
         for k in self.library.keys():
             print("- ", k)
 
@@ -51,14 +51,19 @@ class TextScraper(PassageManager):
 
     def set_active_text(self) -> None:
         """
-        Sets the active text to user input corresponding to a passage name.
+        Sets the active text to a passage name with the ability to add a passage to the library.
         """
-        # get options
-        self.display_library()
-
-        # get input
         while True:
-            user_input = input("Enter the passage name to search: ")
+            print_header("Select Text")
+            # get options
+            self.display_library()
+
+            # get input
+            user_input = input("Enter a passage name or 'Add' to add your own: ")
+
+            if user_input.capitalize() == "Add":
+                self.add_new_passage()
+                continue
 
             # check if in dict and try again if not
             if not self.library.get(user_input, False):
@@ -70,6 +75,7 @@ class TextScraper(PassageManager):
 
         # set value
         self.active_text = user_input
+        print_header(self.get_active_text())
 
     def set_active_char(self) -> None:
         """
@@ -77,7 +83,7 @@ class TextScraper(PassageManager):
         """
         # get input
         while True:
-            user_input = input("Enter a character to search for ")
+            user_input = input("Enter a character to look for: ")
 
             # check if it's a single character
             if len(user_input) != 1:
@@ -90,10 +96,10 @@ class TextScraper(PassageManager):
         # set value
         self.active_char = user_input
 
-    def search_char(self) -> None:
+    def search(self) -> None:
         """
-        Call the active text from the library and count the amount of times the active character appears. The value is
-        stored in the character count attribute.
+        Call the active text from the library and counts the amount of times the active character appears. The value is
+        stored in the char_count attribute.
         """
         self.char_count = self.library[self.active_text].count(self.active_char)
 
@@ -132,9 +138,11 @@ def main():
     """
     # welcome statement
     print_header("Cipher")
-    print("Welcome! This program takes two inputs:\n"
-          "- The title of a passage in the library.\n"
-          "- A character to scan the passage for.")
+    print("Welcome! This program allows the user to enter a    \n"
+          "passage name and a single character. The number of  \n"
+          "times the character appears is calculated and       \n"
+          "displayed! A new feature is the ability to add your \n"
+          "own passage to the library. See below :D")
 
     # initialize library handler and text scraper
     text_scraper = TextScraper()
@@ -148,7 +156,7 @@ def main():
     while True:
         # get char from user and search text
         text_scraper.set_active_char()
-        text_scraper.search_char()
+        text_scraper.search()
 
         # check if character doesn't occur
         if not text_scraper.get_char_count():
@@ -156,8 +164,7 @@ def main():
             continue
 
         # all requirements met
-        print_header("Result")
-        print(f"The character '{text_scraper.get_active_char()}' occurs {text_scraper.get_char_count()} time(s)")
+        text_scraper.print_result()
         break
 
 
