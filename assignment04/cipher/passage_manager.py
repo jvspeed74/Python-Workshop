@@ -1,6 +1,6 @@
 """
-Name:
-Description:
+Name: passage_manager.py
+Description: Implements passage management and searching for characters within passages.
 Imports: print_header function from utils
 """
 from utils import print_header
