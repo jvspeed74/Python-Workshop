@@ -47,6 +47,8 @@ class PassageManager:
         A title and text of a new passage is extracted from user and added as an entry in the library.
         """
         print_header("New Passage")
+
+        # title loop
         while True:
             # get input
             input_title = input("Enter a Title: ")
@@ -64,6 +66,7 @@ class PassageManager:
             # title valid
             break
 
+        # text loop
         while True:
             # get input
             input_text = input("Enter the passage text (must be over 200 characters): ")
@@ -82,7 +85,7 @@ class PassageManager:
 
     def update_titles(self):
         """
-        Reads the current keys in the library and updates the titles accordingly.
+        Updates the titles list based off the current keys in the library.
         """
         self.titles = [k.lower() for k in self.library.keys()]
 
@@ -96,7 +99,7 @@ class TextScraper(PassageManager):
 
     def set_passage(self) -> None:
         """
-        Sets the active text to a passage name with the ability to add a passage to the library.
+        Sets the passage attribute to a passage name in the library. Also allows the user to input their own passage.
         """
         while True:
             print_header("Select Text")
@@ -125,10 +128,10 @@ class TextScraper(PassageManager):
 
     def set_character(self) -> None:
         """
-        Sets the active character to the extracted value of user input.
+        Sets the character to an extracted value of user input.
         """
-        # get input
         while True:
+            # get input
             user_input = input("Enter a character to look for: ")
 
             # check if it's a single character
@@ -144,7 +147,7 @@ class TextScraper(PassageManager):
 
     def search_passage(self) -> None:
         """
-        Call the active text from the library and counts the amount of times the active character appears. The value is
+        Call the passage from the library and counts the amount of times the character appears. The value is
         stored in the char_count attribute.
         """
         self.char_count = self.library[self.passage].count(self.character)
