@@ -5,6 +5,7 @@
 The `cipher.py` script serves two main purposes:
 
 1. **Passage Manager**: Stores passages along with their titles and provides a method to display available passages.
+   Users are able to add passages with select constraints.
 2. **Text Scraper**: Allows users to search for a specific character within a selected passage and returns the count of
    occurrences.
 
@@ -12,6 +13,7 @@ The `cipher.py` script serves two main purposes:
 
 The program takes the following inputs:
 
+- The title and text of a new passage.
 - Selection of a passage title from the available library.
 - A single character to search for within the chosen passage.
 
@@ -46,17 +48,18 @@ Your character 'f' occurs 9 time(s)
 - **PassageManager**: Manages passages and provides methods to display passage titles.
     - __init__(): Initializes the library of passages.
     - display_library(): Prints out the titles of available passages.
+    - add_new_passage(): Adds a user inputted passage to the library.
+    - update_titles(): Reads the current keys in the library and updates the titles accordingly.
 - **TextScraper**: Inherits from PassageManager and allows searching for characters within passages.
     - __init__(): Initializes attributes related to the active text and character.
-    - set_active_text(): Sets the active text based on user input.
-    - set_active_char(): Sets the active character based on user input.
-    - search_char(): Counts the occurrences of the active character within the active text.
+    - set_passage(): Sets the active text based on user input.
+    - set_character(): Sets the active character based on user input.
+    - search_passage(): Counts the occurrences of the active character within the active text.
+    - print_header(): Prints a header with a given text.
     - get_char_count(): Returns the count of character occurrences.
-    - get_active_text(): Returns the title of the active text.
-    - get_active_char(): Returns the active character.
-- **print_header()**: Prints a header with a given text.
 
 ## Potential Improvements
 
-1. The ability to add, edit, or delete passages in the library.
-2. Scanning the passage for the count of all characters in a sorted array.
+1. The ability to edit, or delete passages in the library.
+2. Scanning the passage for the count of multiple characters.
+3. Displaying a sorted array of all character occurrences.

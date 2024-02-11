@@ -30,6 +30,7 @@ class PassageManager:
                                                           "voice now brag their deed— A new laid egg—Now let the day decline— "
                                                           "They’ll lay another by tomorrow’s sun.",
         }
+        self.titles = [k.lower() for k in self.library.keys()]  # used for case-sensitive comparisons
 
     def display_library(self) -> None:
         """
@@ -47,49 +48,53 @@ class PassageManager:
         """
         print_header("New Passage")
         while True:
+            # get input
             input_title = input("Enter a Title: ")
 
+            # prevent 'Add' or empty string from being used as a title
             if not input_title or input_title.capitalize() == 'Add':
                 print("This title cannot exist within the library")
                 continue
 
-            if self.is_existing(input_title):
+            # if title already exists
+            if input_title.lower() in self.titles:
                 print("This passage already exists in the library.")
                 continue
 
+            # title valid
             break
 
         while True:
+            # get input
             input_text = input("Enter the passage text (must be over 200 characters): ")
 
+            # verify correct length
             if len(input_text) < 200:
                 print(f"Text length must be at least 200: [Missing {200 - len(input_text)} characters]")
                 continue
 
+            # text valid
             break
 
+        # add to library and update titles
         self.library[input_title] = input_text
+        self.update_titles()
 
-    def is_existing(self, title: str) -> bool:
+    def update_titles(self):
         """
-        Checks if the given title already exists in the library
+        Reads the current keys in the library and updates the titles accordingly.
         """
-        # iterate over keys
-        for k in self.library.keys():
-            if title.lower() == k.lower():  # remove case sensitivity and compare
-                return True
-
-        return False
+        self.titles = [k.lower() for k in self.library.keys()]
 
 
 class TextScraper(PassageManager):
     def __init__(self):
         super().__init__()
-        self.active_text: str = ""
-        self.active_char: str = ""
-        self.char_count: int = 0
+        self.passage: str = ""  # passage being search through
+        self.character: str = ""  # character being searched for
+        self.char_count: int = 0  # amt of times character appears in passage
 
-    def set_active_text(self) -> None:
+    def set_passage(self) -> None:
         """
         Sets the active text to a passage name with the ability to add a passage to the library.
         """
@@ -101,6 +106,7 @@ class TextScraper(PassageManager):
             # get input
             user_input = input("Enter a passage name or 'Add' to add your own: ")
 
+            # add passage if requested
             if user_input.capitalize() == "Add":
                 self.add_new_passage()
                 continue
@@ -114,10 +120,10 @@ class TextScraper(PassageManager):
             break
 
         # set value
-        self.active_text = user_input
-        print_header(self.get_active_text())
+        self.passage = user_input
+        print_header(self.passage)
 
-    def set_active_char(self) -> None:
+    def set_character(self) -> None:
         """
         Sets the active character to the extracted value of user input.
         """
@@ -134,27 +140,21 @@ class TextScraper(PassageManager):
             break
 
         # set value
-        self.active_char = user_input
+        self.character = user_input
 
-    def search(self) -> None:
+    def search_passage(self) -> None:
         """
         Call the active text from the library and counts the amount of times the active character appears. The value is
         stored in the char_count attribute.
         """
-        self.char_count = self.library[self.active_text].count(self.active_char)
+        self.char_count = self.library[self.passage].count(self.character)
 
     def print_result(self) -> None:
         print_header("Result")
-        print(f"'{self.get_active_char()}' occurs {self.get_char_count()} time(s) in {self.get_active_text()}")
+        print(f"'{self.character}' occurs {self.char_count} time(s) in {self.passage}")
 
     def get_char_count(self) -> int:
         return self.char_count
-
-    def get_active_text(self) -> str:
-        return self.active_text
-
-    def get_active_char(self) -> str:
-        return self.active_char
 
 
 def print_header(header=None) -> None:
@@ -176,9 +176,10 @@ def main():
     Main Program:
     1. Creates a TextScraper object, which is a subclass of PassageManager, that allows you to search for
     character occurrence in a passage.
-    2. Prompts user to select a passage name and a single character to observe.
+    2. Prompts user to select a passage name and a single character to observe. Or grants the user to add a passage of
+    their own.
     3. If the specified character is unable to be found, the program will prompt the user to enter another character.
-    Otherwise, the program will display the amount of times the character occurs and end.
+    4. The program will display the amount of times the character occurs and end.
     """
     # welcome statement
     print_header("Cipher")
@@ -192,13 +193,13 @@ def main():
     text_scraper = TextScraper()
 
     # prompt user for passage name
-    text_scraper.set_active_text()
+    text_scraper.set_passage()
 
     # infinite loop: repeats until a character is found in text
     while True:
         # get char from user and search text
-        text_scraper.set_active_char()
-        text_scraper.search()
+        text_scraper.set_character()
+        text_scraper.search_passage()
 
         # check if character doesn't occur
         if not text_scraper.get_char_count():
