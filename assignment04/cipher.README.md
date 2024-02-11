@@ -43,51 +43,9 @@ Your character 'f' occurs 9 time(s)
 - Conditional Execution
 - Repeated Execution
 
-```plantuml
-
-class PassageManager {
-    -library: dict
-    -titles: list
-    +__init__()
-    +display_library(): None
-    +add_new_passage(): None
-    +update_titles(): None
-}
-
-class TextScraper {
-    -passage: str
-    -character: str
-    -char_count: int
-    +__init__()
-    +set_passage(): None
-    +set_character(): None
-    +search_passage(): None
-    +print_result(): None
-    +get_char_count(): int
-}
-
-
-class Functions << (F,#FF7700) >> {
-    +print_header(): None
-}
-
-class Main << (M, #00DAD0) >> {
-
-}
-
-PassageManager --> Functions : Uses
-TextScraper --> Functions : Uses
-TextScraper --|> PassageManager : Inherits
-Main --> TextScraper : Uses
-Main --> Functions : Uses
-
-
-
-
-```
-
-
 ## Overview of Classes and Functions
+
+![cipher](https://github.com/jvspeed74/B210/assets/74921563/32fdfe45-42ed-4be4-a687-2f05852a30a4)
 
 ### Classes
 
