@@ -41,6 +41,46 @@ class PassageManager:
 
         print_header()
 
+    def add_new_passage(self):
+        """
+        A title and text of a new passage is extracted from user and added as an entry in the library.
+        """
+        print_header("New Passage")
+        while True:
+            input_title = input("Enter a Title: ")
+
+            if not input_title or input_title.capitalize() == 'Add':
+                print("This title cannot exist within the library")
+                continue
+
+            if self.is_existing(input_title):
+                print("This passage already exists in the library.")
+                continue
+
+            break
+
+        while True:
+            input_text = input("Enter the passage text (must be over 200 characters): ")
+
+            if len(input_text) < 200:
+                print(f"Text length must be at least 200: [Missing {200 - len(input_text)} characters]")
+                continue
+
+            break
+
+        self.library[input_title] = input_text
+
+    def is_existing(self, title: str) -> bool:
+        """
+        Checks if the given title already exists in the library
+        """
+        # iterate over keys
+        for k in self.library.keys():
+            if title.lower() == k.lower():  # remove case sensitivity and compare
+                return True
+
+        return False
+
 
 class TextScraper(PassageManager):
     def __init__(self):
@@ -103,6 +143,10 @@ class TextScraper(PassageManager):
         """
         self.char_count = self.library[self.active_text].count(self.active_char)
 
+    def print_result(self) -> None:
+        print_header("Result")
+        print(f"'{self.get_active_char()}' occurs {self.get_char_count()} time(s) in {self.get_active_text()}")
+
     def get_char_count(self) -> int:
         return self.char_count
 
@@ -148,9 +192,7 @@ def main():
     text_scraper = TextScraper()
 
     # prompt user for passage name
-    print_header("Select Text")
     text_scraper.set_active_text()
-    print_header(text_scraper.get_active_text())
 
     # infinite loop: repeats until a character is found in text
     while True:
