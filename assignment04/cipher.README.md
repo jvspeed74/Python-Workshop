@@ -43,20 +43,71 @@ Your character 'f' occurs 9 time(s)
 - Conditional Execution
 - Repeated Execution
 
+```plantuml
+
+class PassageManager {
+    -library: dict
+    -titles: list
+    +__init__()
+    +display_library(): None
+    +add_new_passage(): None
+    +update_titles(): None
+}
+
+class TextScraper {
+    -passage: str
+    -character: str
+    -char_count: int
+    +__init__()
+    +set_passage(): None
+    +set_character(): None
+    +search_passage(): None
+    +print_result(): None
+    +get_char_count(): int
+}
+
+
+class Functions << (F,#FF7700) >> {
+    +print_header(): None
+}
+
+class Main << (M, #00DAD0) >> {
+
+}
+
+PassageManager --> Functions : Uses
+TextScraper --> Functions : Uses
+TextScraper --|> PassageManager : Inherits
+Main --> TextScraper : Uses
+Main --> Functions : Uses
+
+
+
+
+```
+
+
 ## Overview of Classes and Functions
+
+### Classes
 
 - **PassageManager**: Manages passages and provides methods to display passage titles.
     - __init__(): Initializes the library of passages.
     - display_library(): Prints out the titles of available passages.
     - add_new_passage(): Adds a user inputted passage to the library.
     - update_titles(): Reads the current keys in the library and updates the titles accordingly.
+
+
 - **TextScraper**: Inherits from PassageManager and allows searching for characters within passages.
     - __init__(): Initializes attributes related to the active text and character.
     - set_passage(): Sets the active text based on user input.
     - set_character(): Sets the active character based on user input.
     - search_passage(): Counts the occurrences of the active character within the active text.
-    - print_header(): Prints a header with a given text.
     - get_char_count(): Returns the count of character occurrences.
+
+### Functions
+
+  - print_header(): Prints a header with a given text.
 
 ## Potential Improvements
 
