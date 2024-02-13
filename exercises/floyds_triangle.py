@@ -1,8 +1,8 @@
 """
 Name: Jalen Vaughn
 Date: 2/13/24
-File: main.py
-Description: Script to get all the prime numbers within a range of numbers.
+File: floyd's_triangle.py
+Description: Script that prints out a Floyd's triangle with a given number of rows
 Dependencies/Imports: 
 """
 
@@ -28,3 +28,26 @@ def get_input() -> int:
             continue
 
         return user_input
+
+
+def floyd_triangle(rows):
+    """
+
+    :param rows:
+    :type rows:
+    :return:
+    :rtype:
+    """
+    for i in range(rows):  # row
+        this_row = ''
+        for j in range(i + 1):  # column
+            if j != 0:
+                this_row += " "
+
+            if i % 2 == j % 2:
+                this_row += "1"
+            else:
+                this_row += "0"
+        print(this_row)
+
+
