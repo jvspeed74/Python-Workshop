@@ -5,6 +5,7 @@ File: main.py
 Description: Script to get all the prime numbers within a range of numbers.
 Dependencies/Imports: 
 """
+from utils import print_header
 
 
 def get_input() -> int:
@@ -28,3 +29,11 @@ def get_input() -> int:
             continue
 
         return user_input
+
+
+def find_prime_num(endpoint: int):
+    pass
+
+
+def main():
+    pass
