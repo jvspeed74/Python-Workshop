@@ -3,7 +3,7 @@ Name: Jalen Vaughn
 Date: 2/13/24
 File: floyd's_triangle.py
 Description: Script that prints out a Floyd's triangle with a given number of rows
-Dependencies/Imports: 
+Dependencies/Imports: None
 """
 
 
@@ -30,24 +30,49 @@ def get_input() -> int:
         return user_input
 
 
-def floyd_triangle(rows):
+def floyd_triangle(rows: int) -> None:
     """
+    1
+    0 1
+    1 0 1
+    0 1 0 1
+    1 0 1 0 1
 
-    :param rows:
-    :type rows:
-    :return:
-    :rtype:
+    Notes:
+    - rows is an array of 0's and 1's.
+    - if rows[i] is even, the start of the row is 1
+    - if rows[i] is odd, the start of the row is 0
+    - Length of row is len(rows[i]) + 1
+    - 1 is always the last num to appear in a row
+    - start with 1,
+    :param rows: The amount of rows for the function to print.
+    :type rows: int
+    :return: Floyd's Triangle representing the given parameter
+    :rtype: None
     """
-    for i in range(rows):  # row
-        this_row = ''
-        for j in range(i + 1):  # column
-            if j != 0:
-                this_row += " "
+    for i in range(rows):
+        output = ""
+        for j in range(i + 1):
+            # base case
+            if j == i:
+                output += "1"
+                print(output)
+                break
 
-            if i % 2 == j % 2:
-                this_row += "1"
+            # print 1 if row and column index is equal
+            if i % 2 == 0 and j % 2 == 0:
+                output += "1" + " "
+
+            # print 1 if the sum of row and column index is even
+            elif (i + j) % 2 == 0:
+                output += "1" + " "
+
             else:
-                this_row += "0"
-        print(this_row)
+                output += "0" + " "
 
 
+def main():
+    floyd_triangle(get_input())
+
+
+main()
