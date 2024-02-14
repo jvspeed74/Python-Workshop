@@ -5,7 +5,6 @@ File: main.py
 Description: Script to get all the prime numbers within a range of numbers.
 Dependencies:
 - print_header() from utils.py: Used to display customized headers in console.
-TODO: Add readme documentation for prime.README.md
 """
 from utils import print_header
 
@@ -19,7 +18,7 @@ def get_input() -> int:
 
     while True:
         # get input
-        user_input = input("Enter a positive integer: ")
+        user_input = input("Enter an endpoint (positive integer): ")
 
         # error handle conversion to integer
         try:
@@ -31,7 +30,7 @@ def get_input() -> int:
             continue
 
         # check if input is negative
-        if user_input <= 0:
+        if user_input < 0:
             print("Please enter a positive integer.")
             continue
 
@@ -39,47 +38,35 @@ def get_input() -> int:
         return user_input
 
 
-def generate_prime_list(endpoint: int) -> None:
+def generate_prime_list(endpoint: int) -> list[int]:
     """
     Generates a list of prime numbers between 2 and the endpoint parameter, inclusive.
     :param endpoint: The endpoint of the band of numbers checked by the function.
     :type endpoint: int
-    :rtype: None
-
-    Notes:
-    - Two lists: one of the prime numbers and another of the multiples
-    - Everytime a prime number is added to list, n*n is added to multiples
-    - primes and mult have the same index
-    - if n is smaller than any multiple, add to list of primes
-    - if n is equal to any multiple, multiple += prime (corresponding)
+    :return: A list of prime numbers
+    :rtype: list[int]
     """
 
-    # base case: No prime numbers are below 2.
-    if endpoint < 2:
-        print("There are no prime numbers less than 2.")
-        return
-
     # two lists: one of the prime numbers and another of the multiples
-    prime_list, multiples = [], []
+    prime_list, multiple_list = [], []
 
     # iterate band of numbers until the endpoint.
     for n in range(2, endpoint + 1):
 
         # if multiple list is empty or if n is smaller than any multiple
-        if not multiples or n < min(multiples):
-
+        if not multiple_list or n < min(multiple_list):
             # add number to list of primes
             prime_list.append(n)
 
             # Everytime a prime number is added to list, n*n is added to multiples
-            multiples.append(n * n)
+            multiple_list.append(n * n)
             continue
 
         # if n is equal to any multiple, multiple += prime (corresponding)
-        while n in multiples:
-            multiples[multiples.index(n)] += prime_list[multiples.index(n)]
+        while n in multiple_list:
+            multiple_list[multiple_list.index(n)] += prime_list[multiple_list.index(n)]
 
-    print(f"Prime numbers: {prime_list}")
+    return prime_list
 
 
 def main() -> None:
@@ -91,13 +78,16 @@ def main() -> None:
 
     # start
     print_header("Prime Number Generator")
+    print("This script will generate a prime number list.\n"
+          "The list will run until a user specified endpoint, inclusive.")
 
     # get int from user
+    print_header("Endpoint Selection")
     endpoint = get_input()
 
     # generate prime list, display results, and end script.
     print_header("Result")
-    generate_prime_list(endpoint)
+    print(f"Prime numbers: {generate_prime_list(endpoint)}")
 
 
 main()

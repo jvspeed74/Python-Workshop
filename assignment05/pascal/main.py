@@ -5,7 +5,7 @@ File: main.py
 Description: Script to build a pascal triangle
 Dependencies: None
 """
-# TODO: Document pascal.README.md file for script
+
 
 def get_input() -> int:
     """
@@ -51,13 +51,13 @@ def generate_pascal_triangle(n_rows: int) -> list[list[int]]:
         return [[]]
 
     # declare starting point for algorithm
-    result = [[1]]
+    result: list[list[int]] = [[1]]
 
     # iterator for rows
     for i in range(n_rows - 1):
 
         # every row starts with 1
-        next_row = [1]  # data storage for the next row before being passed to result
+        next_row: list[int] = [1]  # data storage for the next row before being passed to result
 
         # iterator for data/columns
         for j in range(i + 1):
@@ -108,9 +108,11 @@ def main() -> None:
     result to the terminal.
     """
 
-    # a function chain is used to preserve memory by not declaring unnecessary variables.
-    # get int from user, pass the number to the generator function, then print the generator function's result.
-    print_pascal_triangle(generate_pascal_triangle(get_input()))
+    # get int from user,
+    total_rows = get_input()
+
+    # pass the number to the generator function then call fuction to print the result.
+    print_pascal_triangle(generate_pascal_triangle(total_rows))
 
 
 main()
