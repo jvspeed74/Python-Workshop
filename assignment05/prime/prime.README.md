@@ -9,17 +9,12 @@ numbers within this range and outputs them to the console.
 ### Files
 
 - `main.py`: Contains the main script and the direct code required for successful processing.
-- `utils.py`: Contains helper functions not directly related to the overall function of the script.
-
-### Dependencies
-
-The script relies on the `print_header()` function from `utils.py`, which is used to display customized headers in the
-console.
 
 ## Functionality
 
 - **get_input()**: Retrieves user input, validates it, and ensures it is a positive integer.
 - **generate_prime_list(endpoint)**: Generates a list of prime numbers between 2 and the specified endpoint, inclusive.
+- **print_header()**: Prints a customer header to the console.
 - **main()**: Orchestrates the execution of the program, prompting the user for input, generating the prime number list,
   and displaying the result.
 

@@ -3,10 +3,7 @@ Name: Jalen Vaughn
 Date: 2/13/24
 File: main.py
 Description: Script to get all the prime numbers within a range of numbers.
-Dependencies:
-- print_header() from utils.py: Used to display customized headers in console.
 """
-from utils import print_header
 
 
 def get_input() -> int:
@@ -67,6 +64,20 @@ def generate_prime_list(endpoint: int) -> list[int]:
             multiple_list[multiple_list.index(n)] += prime_list[multiple_list.index(n)]
 
     return prime_list
+
+
+def print_header(header=None) -> None:
+    """
+    Prints a header to the console with a given text inside
+    :param header: Optional string to use for the text inside the header.
+    """
+    if header is None:
+        print("=" * 60)
+
+    else:  # calculate the correct amount of "=" and dead space to properly fit header in the center
+        width = 60  # total size
+        padding = (width - len(header)) // 2  # the amount of "=" signs to put on both sides
+        print("=" * padding, header, "=" * padding)
 
 
 def main() -> None:
