@@ -2,16 +2,7 @@
 
 ## Purpose
 
-For organization purposes, this module is split into 3 separate files:
-
-- `passage_manager.py`: Contains the 'PassageManager' and 'TextScraper' classes
-- `utils.py`: Contains miscellaneous function tools.
-- `main.py`: Contains the main script which serves the main purposes.
-
-The "cipher" directory is a namespace package; therefore, a file **moved** outside of the directory will not work
-as expected. The only file that needs to be ran is `main.py`.
-
-The Cipher module serves two main purposes:
+The Cipher script serves two main purposes:
 
 1. **Passage Manager**: Stores passages along with their titles and provides a method to display available passages.
    Users are able to add passages with select constraints.
@@ -54,9 +45,6 @@ Your character 'f' occurs 9 time(s)
 
 ## Overview of Classes and Functions
 
-![image](https://github.com/jvspeed74/B210/assets/74921563/a5b50be3-9b16-499c-8293-92831e4ab641)
-
-
 ![cipher](https://github.com/jvspeed74/B210/assets/74921563/32fdfe45-42ed-4be4-a687-2f05852a30a4)
 
 ### Classes
@@ -78,6 +66,7 @@ Your character 'f' occurs 9 time(s)
 ### Functions
 
   - print_header(): Prints a header with a given text.
+  - main(): Runs the entire script.
 
 ## Potential Improvements
 
