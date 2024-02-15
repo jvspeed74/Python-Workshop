@@ -1,6 +1,53 @@
-Prime numbers are numbers which can only be evenly divided by 1 and itself, or put another way numbers whose factors
-include 1 and itself. Prime numbers are of great interest in many fields of mathematics, including cryptography. Write a
-program that asks the user for to input an integer and will print all prime numbers between 2 and the inputted number. (
-You may want to consider using nested for loops.) (40 points)
+# Prime Number Generator
 
-100
+## Overview
+
+This Python script aims to generate a list of prime numbers within a specified range. It prompts the user to input an
+endpoint, which determines the upper limit of the range of numbers to check. The script then identifies all prime
+numbers within this range and outputs them to the console.
+
+### Files
+
+- `main.py`: Contains the main script and the direct code required for successful processing.
+- `utils.py`: Contains helper functions not directly related to the overall function of the script.
+
+### Dependencies
+
+The script relies on the `print_header()` function from `utils.py`, which is used to display customized headers in the
+console.
+
+## Functionality
+
+- **get_input()**: Retrieves user input, validates it, and ensures it is a positive integer.
+- **generate_prime_list(endpoint)**: Generates a list of prime numbers between 2 and the specified endpoint, inclusive.
+- **main()**: Orchestrates the execution of the program, prompting the user for input, generating the prime number list,
+  and displaying the result.
+
+## Input
+
+The program takes a single positive integer as input, which represents the endpoint of the range of numbers to check for
+prime numbers.
+
+## Expected Output
+
+Upon execution, the program prints the list of prime numbers within the specified range to the console.
+
+```
+========================== Prime Number Generator ==========================
+This script will generate a prime number list.
+The list will run until a user specified endpoint, inclusive.
+============================ Endpoint Selection ============================
+Enter an endpoint (positive integer): 10
+================================== Result ==================================
+Prime numbers: [2, 3, 5, 7]
+```
+
+## Execution
+
+- Sequential
+- Conditional
+- Repeated
+
+## Potential Improvements
+
+1. **Efficiency**: Optimize the algorithm for generating prime numbers.

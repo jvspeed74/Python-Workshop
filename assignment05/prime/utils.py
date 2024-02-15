@@ -13,9 +13,9 @@ def print_header(header=None) -> None:
     :param header: Optional string to use for the text inside the header.
     """
     if header is None:
-        print("=" * 50)
+        print("=" * 60)
 
     else:  # calculate the correct amount of "=" and dead space to properly fit header in the center
-        width = 50  # total size
+        width = 60  # total size
         padding = (width - len(header)) // 2  # the amount of "=" signs to put on both sides
         print("=" * padding, header, "=" * padding)
