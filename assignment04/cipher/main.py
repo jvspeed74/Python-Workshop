@@ -257,7 +257,3 @@ def main():
         # all requirements met
         text_scraper.print_result()
         break
-
-
-if __name__ == "__main__":
-    main()
