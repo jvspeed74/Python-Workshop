@@ -257,3 +257,6 @@ def main():
         # all requirements met
         text_scraper.print_result()
         break
+
+
+main()
