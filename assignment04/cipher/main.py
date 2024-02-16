@@ -133,7 +133,7 @@ class TextScraper(PassageManager):
             self.display_library()
 
             # get input
-            user_input = input("Enter a passage name or 'Add' to add your own: ")
+            user_input = input("Enter a passage name (case sensitive) or 'Add' to add your own: ")
 
             # add passage if requested
             if user_input.capitalize() == "Add":
