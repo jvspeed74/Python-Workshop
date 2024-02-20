@@ -1,0 +1,3 @@
+Inspired by one of our previous exercises about cryptography, a group of students has developed a cipher to allow for coded communication between them. This cipher uses a combination of ascii, decimal, and octal values. The values would be written in decimal values, which would then need to be transformed to octal values, before being translated into ascii characters. Unless, that value can’t be written in octal value, then it will listed as a negative decimal value. Write a program that takes a string of numbers as input and will return the translated message. (40 points)
+
+57 73 73 64 26 -108 79 -99 71 26 73 72 26 81 73 79 76 26 -109 69 64 78 65 76 -109 27
