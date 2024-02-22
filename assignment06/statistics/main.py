@@ -110,5 +110,7 @@ def main():
         print_header("Statistics")
         stats.display_stats()
 
+        # end program
+        break
 
 main()
