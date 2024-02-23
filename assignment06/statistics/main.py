@@ -71,7 +71,7 @@ class Statistics:
 
 def input_int() -> int:
     """
-    Gets an input from the user and returns the value if it is a validated float.
+    Gets an input from the user and returns the value if it is a validated integer.
     :return: Extracted value from the user.
     :rtype: int
     """
