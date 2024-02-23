@@ -1,3 +1,48 @@
-Inspired by one of our previous exercises about cryptography, a group of students has developed a cipher to allow for coded communication between them. This cipher uses a combination of ascii, decimal, and octal values. The values would be written in decimal values, which would then need to be transformed to octal values, before being translated into ascii characters. Unless, that value can’t be written in octal value, then it will listed as a negative decimal value. Write a program that takes a string of numbers as input and will return the translated message. (40 points)
+# Cryptography
 
-57 73 73 64 26 -108 79 -99 71 26 73 72 26 81 73 79 76 26 -109 69 64 78 65 76 -109 27
+**Author:** Jalen Vaughn  
+**Date:** 2/20/24  
+**File:** main.py
+
+## Description
+
+This module contains a Python script designed to decrypt a secret message encoded with a specific cipher. The script
+allows users to input a list of numbers, which represent encrypted characters. It then decrypts the message by
+converting each number to its corresponding ASCII character, with some numbers being first converted to octal form.
+
+## Purpose
+
+The purpose of this program is to decode a secret message encrypted using a combination of decimal and octal values. It
+provides a simple interface for users to input the encoded message and decrypt it into readable text.
+
+## Input
+
+The program takes a string of numbers separated by spaces as input. These numbers represent the encrypted characters of
+the secret message.
+
+
+## Expected Output
+
+The expected output of the program is the decrypted message, which is printed to the terminal after decoding the input
+numbers.
+
+```
+Enter a string of numbers separated by spaces: 57 73 73 64
+Good
+```
+
+## Execution Type
+
+The program follows a procedural execution style. It prompts the user for input, performs decryption, and outputs the
+decoded message.
+
+Specific Types:
+- Sequential
+- Conditional
+- Repeated
+
+## Potential Improvements
+
+- Code Refactoring: Consider refactoring the code for readability and maintainability, breaking down complex sections
+  into smaller functions.
+- Encoding Ability: Implement functionality that gives the user the ability to encode their own message.
