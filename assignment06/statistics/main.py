@@ -170,4 +170,5 @@ def main():
         break
 
 
+# run script
 main()
