@@ -42,21 +42,23 @@ def main() -> None:
         
         # decode each list number while validating input
         decoded_text: list = []
-        for n in secret_message:
+        for elem in secret_message:
             
             # convert number to integer; will throw ValueError if unable
             try:
-                n: int = int(n)
+                num: int = int(elem)
             except ValueError:
-                print(f"Non-integer detected: {n}\nExpected a list of integers separated by a single space.")
+                print(f"Non-integer detected: {elem}\nExpected a list of integers separated by a single space.")
                 break
             
-            # if number is positive, convert to octal form
-            if n >= 0:
-                n: int = int(oct(n)[2:])  # eject "0o" from the value and convert back to int
+            # convert to octal form -> slice "0o" -> get chr from value
+            if num >= 0:
+                decoded_text.append(chr(int(oct(num)[2:])))
             
-            # validate n to a positive number and append character representation
-            decoded_text.append(chr(abs(n)))
+            # leave in dec form -> turn value positive -> get chr from value
+            else:
+                decoded_text.append(chr(abs(num)))
+        
         else:
             # combine list items into a string then print the result
             print_header("Result")

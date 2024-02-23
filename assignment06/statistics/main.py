@@ -76,16 +76,16 @@ def input_int() -> int:
     :rtype: int
     """
     while True:
-        user_input = input("Enter an integer: ")
+        user_input: str = input("Enter an integer: ")
         
         try:
-            user_input = int(user_input)
+            output: int = int(user_input)
         except ValueError:
             print(f"Invalid input: '{user_input}'. Your input is not a valid integer.")
             continue
         
         # valid float
-        return user_input
+        return output
 
 
 def print_header(header=None) -> None:
