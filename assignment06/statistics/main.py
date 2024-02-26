@@ -11,6 +11,7 @@ class Utils:
     """
     This class contains utility/helper functions. Exists solely to be inherited from.
     """
+    
     @staticmethod
     def error(msg) -> None:
         """
@@ -85,46 +86,6 @@ class Statistics:
         if self.step_size < 0:
             self.__values = sorted(self.__values, reverse=True)
     
-    def mean(self) -> float:
-        """
-        Calculates the mean of the list values
-        :return: Mean of the list values
-        :rtype: float
-        """
-        return sum(self.__values) / len(self.__values)
-    
-    def median(self) -> float:
-        """
-        Calculates the median of the list values
-        :return: Median of the list values
-        :rtype: float
-        """
-        # get specific formula based on list length
-        if len(self.__values) % 2 == 0:
-            # Even: return mean of two center values
-            return (self.__values[len(self.__values) // 2] + self.__values[(len(self.__values) // 2) - 1]) / 2
-        else:
-            # Odd: return center value
-            return float(self.__values[(len(self.__values) // 2)])
-    
-    def range(self) -> int:
-        """
-        Calculates the range of the list values
-        :return: Range of the list values
-        :rtype: int
-        """
-        return max(self.__values) - min(self.__values)
-    
-    def display_stats(self) -> None:
-        """
-        Displays all the statistical characteristics of the value list
-        """
-        Utils.print_header("Statistic Info")
-        return print(f"Values: {self.__values}\n"
-                     f"Mean: {self.mean():.2f}\n"
-                     f"Median: {self.median():.2f}\n"
-                     f"Range: {self.range()}")
-    
     def set_input_params(self) -> None:
         """
         Obtains statistical parameters (lower bound, upper bound, step size) from user input and sets them to the
@@ -174,6 +135,46 @@ class Statistics:
             self.step_size = step_size
             
             return
+    
+    def mean(self) -> float:
+        """
+        Calculates the mean of the list values
+        :return: Mean of the list values
+        :rtype: float
+        """
+        return sum(self.__values) / len(self.__values)
+    
+    def median(self) -> float:
+        """
+        Calculates the median of the list values
+        :return: Median of the list values
+        :rtype: float
+        """
+        # get specific formula based on list length
+        if len(self.__values) % 2 == 0:
+            # Even: return mean of two center values
+            return (self.__values[len(self.__values) // 2] + self.__values[(len(self.__values) // 2) - 1]) / 2
+        else:
+            # Odd: return center value
+            return float(self.__values[(len(self.__values) // 2)])
+    
+    def range(self) -> int:
+        """
+        Calculates the range of the list values
+        :return: Range of the list values
+        :rtype: int
+        """
+        return max(self.__values) - min(self.__values)
+    
+    def display_stats(self) -> None:
+        """
+        Displays all the statistical characteristics of the value list
+        """
+        Utils.print_header("Statistic Info")
+        return print(f"Values: {self.__values}\n"
+                     f"Mean: {self.mean():.2f}\n"
+                     f"Median: {self.median():.2f}\n"
+                     f"Range: {self.range()}")
 
 
 def run_script() -> None:
