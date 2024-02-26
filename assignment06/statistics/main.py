@@ -9,15 +9,16 @@ Dependencies/Imports: None
 
 class Utils:
     """
-    This class contains utility/helper functions. Exists solely to be inherited from.
+    This class contains utility/helper functions.
     """
     
     @staticmethod
-    def error(msg) -> None:
+    def print_error(msg) -> None:
         """
         Prints an error message
         :param msg: Error message to print
         """
+        
         Utils.print_header("Program Error")
         print(msg)
     
@@ -28,6 +29,7 @@ class Utils:
         :return: Extracted value from the user.
         :rtype: int
         """
+        
         while True:
             user_input: str = input("Enter an integer: ")
             
@@ -46,6 +48,7 @@ class Utils:
         Prints a header to the console with a given text inside
         :param header: Optional string to use for the text inside the header.
         """
+        
         if header is None:
             print("=" * 50)
             return
@@ -62,11 +65,6 @@ class Statistics:
     """
     
     def __init__(self):
-        # declare params
-        self.lower_bound: int
-        self.upper_bound: int
-        self.step_size: int
-        
         # display welcome message
         Utils.print_header("Statistics")
         print("This program calculates the mean, median, and range\n"
@@ -77,20 +75,23 @@ class Statistics:
               "Note: The length of the series must be at least 3!")
         
         # call func to set params from user input
-        self.set_input_params()
+        lower_bound, upper_bound, step_size = self.user_input_params()
         
-        # create values with list comprehension
-        self.__values: list[int] = [x for x in range(self.lower_bound, self.upper_bound + 1, abs(self.step_size))]
+        # create attribute using comprehension and range
+        self.__values: list[int] = [x for x in range(lower_bound, upper_bound + 1, abs(step_size))]
         
         # sort list by descending if step size is negative
-        if self.step_size < 0:
+        if step_size < 0:
             self.__values = sorted(self.__values, reverse=True)
     
-    def set_input_params(self) -> None:
+    def user_input_params(self) -> tuple[int, int, int]:
         """
-        Obtains statistical parameters (lower bound, upper bound, step size) from user input and sets them to the
-        instance attributes of the class.
+        Obtains statistical parameters (lower bound, upper bound, step size) from user input, checks for errors, and
+        returns the values as a tuple
+        :return: (lower_bound, upper_bound, step_size)
+        :rtype: tuple[int, int, int]
         """
+        
         while True:
             # obtain lower boundary from user
             Utils.print_header("Lower Boundary")
@@ -102,13 +103,14 @@ class Statistics:
             
             # Logic error: Lower boundary cannot be greater than Upper
             if lower_bound >= upper_bound:
-                Utils.error(f"Invalid input: Upper Bound\nUpper bound must be greater than lower bound: {lower_bound}")
+                Utils.print_error(
+                    f"Invalid input: Upper Bound\nUpper bound must be greater than lower bound: {lower_bound}")
                 continue
             
             # Call error if boundaries are adjacent
             if lower_bound in [upper_bound - 1, upper_bound + 1]:
-                Utils.error(f"Warning: The boundaries {lower_bound, upper_bound} are too close to\n"
-                            "generate a valid series of numbers (minimum length of 3).")
+                Utils.print_error(f"Warning: The boundaries {lower_bound, upper_bound} are too close to\n"
+                                  "generate a valid series of numbers (minimum length of 3).")
                 continue
             
             # obtain step size
@@ -120,21 +122,16 @@ class Statistics:
             
             # Logic error: Impossible to step by zero
             if step_size == 0:
-                Utils.error(f"Invalid input: Step Size\nStep size cannot be zero.")
+                Utils.print_error(f"Invalid input: Step Size\nStep size cannot be zero.")
                 continue
             
             # Series Validation error: Length of list must be at least 3
             if lower_bound + abs(step_size * 2) > upper_bound:
-                Utils.error("Warning: The combination of boundaries and step size\n"
-                            "leads to a series that is too small.\n")
+                Utils.print_error("Warning: The combination of boundaries and step size\n"
+                                  "leads to a series that is too small.")
                 continue
             
-            # set instance attributes
-            self.lower_bound = lower_bound
-            self.upper_bound = upper_bound
-            self.step_size = step_size
-            
-            return
+            return lower_bound, upper_bound, step_size
     
     def mean(self) -> float:
         """
@@ -142,6 +139,7 @@ class Statistics:
         :return: Mean of the list values
         :rtype: float
         """
+        
         return sum(self.__values) / len(self.__values)
     
     def median(self) -> float:
@@ -150,6 +148,7 @@ class Statistics:
         :return: Median of the list values
         :rtype: float
         """
+        
         # get specific formula based on list length
         if len(self.__values) % 2 == 0:
             # Even: return mean of two center values
@@ -164,12 +163,14 @@ class Statistics:
         :return: Range of the list values
         :rtype: int
         """
+        
         return max(self.__values) - min(self.__values)
     
     def display_stats(self) -> None:
         """
         Displays all the statistical characteristics of the value list
         """
+        
         Utils.print_header("Statistic Info")
         return print(f"Values: {self.__values}\n"
                      f"Mean: {self.mean():.2f}\n"
