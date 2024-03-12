@@ -38,6 +38,8 @@ def probability(dice_config: str, threshold: int) -> str:
      of sides.
     :param int threshold: The number to calculate the probability at and above.
     :return: String formatted probability of the dice roll.
+    :raises ValueError: If the dice configuration cannot exist.
+    :raises TypeError: If the arguments are not of the correct type.
     """
     # Catch argument errors
     if type(dice_config) is not str:
@@ -68,7 +70,7 @@ def probability(dice_config: str, threshold: int) -> str:
     target_events: int = sum(sum(e) >= threshold for e in sample_space)
     
     # Return the chances of rolling at or above the threshold
-    return f"{target_events / total_events * 100:.2f}%"
+    return f"{target_events / total_events * 100:.2f}% or {target_events} / {total_events}"
 
 
 def main():

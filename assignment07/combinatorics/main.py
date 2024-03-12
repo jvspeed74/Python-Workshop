@@ -8,7 +8,7 @@ Imports:
 from itertools import permutations
 
 
-def combinatorics(sequence: str) -> list[tuple[str, ...]]:
+def combinatorics(sequence: str) -> list[str]:
     """
     This function creates a list of permutations of a given string. Note: f-strings or any arbitrary strings will throw
     an exception.
@@ -22,7 +22,10 @@ def combinatorics(sequence: str) -> list[tuple[str, ...]]:
             raise TypeError("Sequence must be a string")
         
         # Generate a list of permutations from the input sequence
-        res: list[tuple[str, ...]] = list(permutations(sequence))  # TODO: Combine each elem into a string
+        permutation_list = permutations(sequence)
+        
+        # Format the result into a list of string
+        res: list[str] = [''.join(perm) for perm in permutation_list]
     
     except TypeError as e:
         raise e
@@ -34,7 +37,6 @@ def main() -> None:
     """
     Main entry point of the program. Each test case within the program will run through the combinatorics function and
     print the result.
-    :return:
     """
     test_cases = [
         "ABC",

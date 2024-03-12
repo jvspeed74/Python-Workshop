@@ -1,17 +1,22 @@
 # Probability Calculator
 
-
 ## Purpose
-The purpose of this program is to calculate the probability of rolling a die at or above a specified threshold, given a certain dice configuration.
+
+The purpose of this program is to calculate the probability of rolling a die at or above a specified threshold, given a
+certain dice configuration.
 
 ## Imports
-Product object from itertools module
+
+- From `itertools` import `product`
 
 ## Input
-- `dice_config`: A string representing the dice configuration in the format "NdS" where N is the number of dice and S is the number of sides.
+
+- `dice_config`: A string representing the dice configuration in the format "NdS" where N is the number of dice and S is
+  the number of sides.
 - `threshold`: An integer representing the threshold number.
 
 ## Expected Output
+
 The program returns a string formatted probability of rolling the dice at or above the specified threshold.
 
 ```
@@ -29,7 +34,11 @@ consisting of two positive integers delimited by "d"
 - Repeated
 - Sequential
 
-## Improvements
-- Optimizing list generation techniques
-- More test cases could be added to ensure the robustness of the program.
-- The script could be extended to handle more complex dice configurations, such as adding modifiers or special rules.
+## Potential Improvements
+
+1. **Algorithm Optimizations**: Optimizing list generation techniques.
+
+2. **In-depth Testing**: More test cases could be added to ensure the robustness of the program.
+
+3. **Greater Functionality**: The script could be extended to handle more complex dice configurations, such as adding
+   modifiers or special rules.
