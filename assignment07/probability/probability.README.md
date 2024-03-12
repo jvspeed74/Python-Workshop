@@ -1,16 +1,35 @@
-Probability plays a essential role in all games of chance from Poker to Roulette. A less common form of games of chance
-are games that rely on dice roll. Craps is a classic casino game in which players bet on the outcome of rolling 2 six
-dice (2d6). Write a function that takes a dice configuration, and a numeric value as input. The function should then
-calculate the probability of rolling a series of numbers on the dice that matches or exceeds the input value (ie. ‘1d6’,
-3, would return 4/6). You can use a stats based or a numeric approach, whichever you are more comfortable with. (40
-points)
+# Probability Calculator
 
-‘2d6’, 7
 
-‘2d6’, 9
+## Purpose
+The purpose of this program is to calculate the probability of rolling a die at or above a specified threshold, given a certain dice configuration.
 
-‘3d8’, 22
+## Imports
+Product object from itertools module
 
-‘1d20’, 17
+## Input
+- `dice_config`: A string representing the dice configuration in the format "NdS" where N is the number of dice and S is the number of sides.
+- `threshold`: An integer representing the threshold number.
 
-6, 5
+## Expected Output
+The program returns a string formatted probability of rolling the dice at or above the specified threshold.
+
+```
+================== Test: 1d20, 17 ==================
+20.00%
+==================== Test: 6, 5 ====================
+Program Error: Dice configuration must be a string
+consisting of two positive integers delimited by "d"
+==================================================
+```
+
+## Execution
+
+- Conditional
+- Repeated
+- Sequential
+
+## Improvements
+- Optimizing list generation techniques
+- More test cases could be added to ensure the robustness of the program.
+- The script could be extended to handle more complex dice configurations, such as adding modifiers or special rules.
