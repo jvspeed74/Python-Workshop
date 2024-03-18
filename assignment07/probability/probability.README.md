@@ -8,6 +8,7 @@ certain dice configuration.
 ## Imports
 
 - From `itertools` import `product`
+- From `time` import `sleep`
 
 ## Input
 

@@ -3,10 +3,10 @@ Author: Jalen Vaughn
 Date: 3/7/2024
 File: probability.py
 Description: This script is the solution to problem one in assignment 7.
-Imports: itertools
+Imports: itertools, time
 """
-
 from itertools import product
+from time import sleep
 
 
 class Utils:
@@ -25,9 +25,9 @@ class Utils:
             print("=" * 50)
             return
         
-        # calculate the correct amount of "=" and dead space to properly fit header in the center
-        width: int = 50  # total size
-        padding: int = (width - len(header)) // 2  # the amount of "=" signs to put on both sides
+        # Calculate the correct amount of "=" and dead space to properly fit header in the center
+        width: int = 50  # Total size
+        padding: int = (width - len(header)) // 2  # The amount of "=" signs to put on both sides
         print("=" * padding, header, "=" * padding)
 
 
@@ -78,6 +78,8 @@ def main():
     Main entry point of the program. Each test case within the program will run through the probability function and
     print the result.
     """
+    
+    # Declare test cases
     test_cases = [
         ('2d6', 7),
         ('2d6', 9),
@@ -89,6 +91,7 @@ def main():
     # Run parameters through the probability function
     for dc, t in test_cases:
         Utils.print_header(f"Test: {dc}, {t}")
+        sleep(0.5)  # Prevent script from running too fast
         print(probability(dc, t))
     else:
         Utils.print_header()
