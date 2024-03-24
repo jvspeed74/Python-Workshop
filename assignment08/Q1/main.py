@@ -79,11 +79,12 @@ def main():
     ]
     
     # Test the count_types function.
+    Utils.print_header("Starting Test", "*")
     for string in test_cases:
         Utils.print_header(f"Test: {string}")
         count_types(string)
     else:
-        Utils.print_header()
+        Utils.print_header("All Tests Complete", "*")
 
 
 main()

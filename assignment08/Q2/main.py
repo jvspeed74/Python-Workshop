@@ -66,11 +66,11 @@ def main():
     
     # Declare test cases.
     test_set_a = [
-        ("SATOR\nAREPO\nTENET\nOPERA\nROTAS\n", 0),
+        ["SATOR\nAREPO\nTENET\nOPERA\nROTAS\n"],
     ]
     
     test_set_b = [
-        ('Elizabeth it is in vain you say\t'
+        ['Elizabeth it is in vain you say\t'
          '“Love not” – thou sayest it in so sweet a way:\t'
          'In vain those words from thee or L.E.L.\t'
          'Zantippe’s talents had enforced so well:\t'
@@ -78,7 +78,7 @@ def main():
          'Breath it less gently forth — and veil thine eyes.\t'
          'Endymion, recollect, when Luna tried\t'
          'To cure his love – was cured of all beside\t'
-         'His folly – pride – and passion – for he died.', 0, 0, "\t")
+         'His folly – pride – and passion – for he died.']
     ]
     
     # Test decode_acrostic function.
@@ -95,7 +95,7 @@ def main():
     Utils.print_header("Starting Test B", "*")
     for counter, test in enumerate(test_set_b):
         Utils.print_header(f"Test B: {counter + 1}")
-        decode_acrostic(*test)
+        decode_acrostic(*test, delimiter="\t")
     else:
         Utils.print_header("All Tests Complete", "*")
 
