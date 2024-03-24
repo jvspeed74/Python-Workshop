@@ -13,20 +13,24 @@ class Utils:
     """
     
     @staticmethod
-    def print_header(header=None) -> None:
+    def print_header(text=None, decor="=") -> None:
         """
         Prints a header to the console with a given text inside
-        :param header: Optional string to use for the text inside the header.
+        :param text: Optional var to use for the text inside the header.
+        :param decor: Optional str to replace "=" with a custom item
         """
         
-        if header is None:
-            print("=" * 50)
+        # Print header without text.
+        if text is None:
+            print(decor * 50)
             return
         
-        # Calculate the correct amount of "=" and dead space to properly fit header in the center
-        width: int = 50  # Total size
-        padding: int = (width - len(header)) // 2  # The amount of "=" signs to put on both sides
-        print("=" * padding, header, "=" * padding)
+        # Declare header margins.
+        width: int = 50
+        padding: int = (width - len(text)) // 2
+        
+        # Print header with text.
+        print(decor * padding, text, decor * padding)
 
 
 def decode_acrostic(acrostic: str, first_line: int = 0, char_start_pos: int = 0, delimiter: str = "\n") -> None:
@@ -60,12 +64,12 @@ def main():
     display the result.
     """
     
-    # Declare test cases
-    test_a_cases = [
+    # Declare test cases.
+    test_set_a = [
         ("SATOR\nAREPO\nTENET\nOPERA\nROTAS\n", 0),
     ]
     
-    test_b_cases = [
+    test_set_b = [
         ('Elizabeth it is in vain you say\t'
          '“Love not” – thou sayest it in so sweet a way:\t'
          'In vain those words from thee or L.E.L.\t'
@@ -77,22 +81,23 @@ def main():
          'His folly – pride – and passion – for he died.', 0, 0, "\t")
     ]
     
-    # Run Test A parameters through the decode_acrostic function
-    for test in test_a_cases:
-        for i in range(5):
+    # Test decode_acrostic function.
+    # Test Set A
+    Utils.print_header("Starting Test A", "*")
+    for test in test_set_a:
+        for i in range(5):  # Test Indexes 0-4.
             Utils.print_header(f"Test A: {i + 1}")
             decode_acrostic(*test, char_start_pos=i)
-    
     else:
-        Utils.print_header("Test A Complete")
-        print("\n")
-    
-    # Run Test B parameters through the decode_acrostic function
-    for count, test in enumerate(test_b_cases):
-        Utils.print_header(f"Test B: {count + 1}")
+        Utils.print_header("Test A Complete", "*")
+        
+    # Test Set B
+    Utils.print_header("Starting Test B", "*")
+    for counter, test in enumerate(test_set_b):
+        Utils.print_header(f"Test B: {counter + 1}")
         decode_acrostic(*test)
     else:
-        Utils.print_header("All Tests Complete")
+        Utils.print_header("All Tests Complete", "*")
 
 
 main()

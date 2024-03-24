@@ -13,20 +13,24 @@ class Utils:
     """
     
     @staticmethod
-    def print_header(header=None) -> None:
+    def print_header(text=None, decor="=") -> None:
         """
         Prints a header to the console with a given text inside
-        :param header: Optional string to use for the text inside the header.
+        :param text: Optional var to use for the text inside the header.
+        :param decor: Optional str to replace "=" with a custom item
         """
         
-        if header is None:
-            print("=" * 50)
+        # Print header without text.
+        if text is None:
+            print(decor * 50)
             return
         
-        # Calculate the correct amount of "=" and dead space to properly fit header in the center
-        width: int = 50  # Total size
-        padding: int = (width - len(header)) // 2  # The amount of "=" signs to put on both sides
-        print("=" * padding, header, "=" * padding)
+        # Declare header margins.
+        width: int = 50
+        padding: int = (width - len(text)) // 2
+        
+        # Print header with text.
+        print(decor * padding, text, decor * padding)
 
 
 def count_types(string: str) -> None:
@@ -34,38 +38,25 @@ def count_types(string: str) -> None:
     This function takes a string as input, and will calculate the number of numeric characters, lower case characters,
     upper case characters, and symbols contained in the string and displays them to the user. Use string functions to
     make the display aesthetically pleasing.
-    
     :param string: String to be iterated upon.
     """
-    if type(string) is not str:
-        raise TypeError("Error in `count_types`: Argument must be a string")
     
-    # Declare variables that will track count of character types
-    numeric_count: int = 0
-    lowercase_count: int = 0
-    uppercase_count: int = 0
-    symbol_count: int = 0
+    # Declare variables that will count the varying character types.
+    numeric_count, lowercase_count, uppercase_count, symbol_count = 0, 0, 0, 0
     
-    # Iterate over the string; incrementing counters where necessary
+    # Iterate over the string.
     for char in string:
-        # Numeric check
+        # Check character type and update counter.
         if char.isnumeric():
             numeric_count += 1
-        
-        # Lowercase check
-        if char.islower():
+        elif char.islower():
             lowercase_count += 1
-        
-        # Uppercase check
-        if char.isupper():
+        elif char.isupper():
             uppercase_count += 1
-        
-        # Symbol check
-        if not char.isalnum():
+        elif not char.isalnum():
             symbol_count += 1
     
-    # Format and display answer
-    Utils.print_header("Count of Character Types")
+    # Format and display answer.
     print(f"Numeric Characters: {numeric_count}")
     print(f"Lowercase Characters: {lowercase_count}")
     print(f"Uppercase Characters: {uppercase_count}")
@@ -78,7 +69,7 @@ def main():
     print the result.
     """
     
-    # Declare test cases
+    # Declare test cases.
     test_cases: list[str] = [
         "n<V}wePdAA`9kE2?",
         'u@jmzB="nMLLH6Ee',
@@ -87,10 +78,10 @@ def main():
         "K^5Vk&EA!?`6aB@$",
     ]
     
-    # Run parameter through the count_types function
-    for s in test_cases:
-        Utils.print_header(f"Test: {s}")
-        count_types(s)
+    # Test the count_types function.
+    for string in test_cases:
+        Utils.print_header(f"Test: {string}")
+        count_types(string)
     else:
         Utils.print_header()
 
