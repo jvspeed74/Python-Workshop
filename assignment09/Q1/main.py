@@ -9,7 +9,7 @@ Dependencies/Imports: None
 
 class Subgrid:
     def __init__(self):
-        pass
+        ...
 
 
 def main():
