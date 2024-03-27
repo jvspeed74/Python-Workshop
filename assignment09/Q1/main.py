@@ -3,13 +3,52 @@ Name: Jalen Vaughn
 Date: 3/26/24
 File: main.py
 Description: This script contains the solution to question 1
-Dependencies/Imports: None
+Dependencies/Imports: Numpy
 """
+# todo add comments and docstuff
+import numpy as np
 
 
-class Subgrid:
-    def __init__(self):
-        ...
+class SudokuValidator:
+    def __init__(self, grid):
+        self.grid = grid
+    
+    @property
+    def grid(self):
+        return self._grid
+    
+    @grid.setter
+    def grid(self, new_grid):
+        def is_valid():
+            if isinstance(new_grid, list):
+                if len(new_grid) == 9:
+                    return True
+                elif all(isinstance(subgrid, list) and len(subgrid) == 3 for subgrid in new_grid):
+                    return True
+            return False
+        
+        if is_valid():
+            self._grid = new_grid
+        else:
+            raise TypeError(f"Invalid input '{new_grid}'. Expected a flat list of 9 elements or a 3x3 matrix.")
+    
+    def check_legality(self):
+        matrix = np.array(self._grid, ndmin=2)
+        memory = {}
+        for i in range(matrix.shape[0]):
+            for j in range(matrix.shape[1]):
+                try:
+                    int_value = int(matrix[i, j])
+                except ValueError:
+                    print(f"Non-integer value '{matrix[i, j]}' found at row {i} and column {j}")
+                else:
+                    if not 1 <= int_value <= 9:
+                        print(f"Illegal value '{int_value}' found at row {i} and column {j}."
+                              f"Values must be integers in the range 1-9.")
+                    elif int_value in memory:
+                        print(f"Duplicate value '{int_value}' found at row {i} and column {j}")
+                    else:
+                        memory[int_value] = (i, j)
 
 
 def main():
@@ -25,8 +64,9 @@ def main():
     ]
     
     # Call each test case and display result
-    for test_case in test_cases:
-        ...  # do something
+    for test in test_cases:
+        test_obj = SudokuValidator(test)
+        test_obj.check_legality()
 
 
 main()
