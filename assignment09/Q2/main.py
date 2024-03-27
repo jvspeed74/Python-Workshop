@@ -34,15 +34,29 @@ class Utils:
 
 
 def word_count(text: str, most_common: bool = False) -> None:
-    bank = {}
+    """
+    Count the occurrences of each unique word in the given text.
+    
+    :param text: The input text to analyze.
+    :param most_common: If True, display the three most common words and their counts.
+    """
+    # Catch invalid arguments.
+    if not isinstance(text, str) or not isinstance(most_common, bool):
+        raise TypeError(f"Invalid input")
+    
+    bank: dict = {}  # Stores each word (key) and the number of occurrences (value).
+    
+    # Check each word in text (case-insensitive) and store the number of occurrences in dict.
     for word in text.split():
         if word.lower() in bank:
             bank[word.lower()] += 1
         else:
             bank[word.lower()] = 1
     
+    # Display results; Check for optional param.
     print("Number of unique words:", len(bank))
     if most_common:
+        # Grab the top 3 words from the word bank and print them to the terminal.
         sorted_bank = sorted(bank.items(), key=lambda x: x[1], reverse=True)
         print("Most common words:")
         for word, count in sorted_bank[:3]:
@@ -50,6 +64,11 @@ def word_count(text: str, most_common: bool = False) -> None:
 
 
 def main():
+    """
+    Main entry point of the program. Each test case will be passed through the word_count function.
+    """
+    
+    # Declare list of test inputs
     test_cases = ["""It was many and many a year ago
 In a kingdom by the sea
 That a maiden there lived whom you may know
@@ -90,9 +109,10 @@ Of the beautiful Annabel Lee
 And so all the night-tide I lie down by the side
 Of my darling my darling my life and my bride
 In her sepulchre there by the sea
-In her tomb by the sounding sea"""
+In her tomb by the sounding sea""",
                   ]
     
+    # Call each test and display result
     for i, test in enumerate(test_cases):
         Utils.print_header(f"Stanza #{i + 1}")
         word_count(test, True)
