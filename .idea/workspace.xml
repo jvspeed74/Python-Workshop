@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca391d7e-40b5-4ed6-bdb7-3b1a3d8bc02d" name="Changes" comment="Lab10">
-      <change afterPath="$PROJECT_DIR$/assignment11/Q1/Q1.README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment11/Q1/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment11/Q2/Q2.README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment11/Q2/main.py" afterDir="false" />
+    <list default="true" id="ca391d7e-40b5-4ed6-bdb7-3b1a3d8bc02d" name="Changes" comment="Completed assignment 11">
+      <change afterPath="$PROJECT_DIR$/lab12/B210_Lecture_14_Lab.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/B210.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/B210.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/diffi/Documents/GitHub/B210/exercises",
+    "last_opened_file_path": "C:/Users/diffi/Documents/GitHub/B210/lab12",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -104,6 +103,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diffi\Documents\GitHub\B210\lab12" />
       <recent name="C:\Users\diffi\Documents\GitHub\B210\exercises" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -176,7 +176,11 @@
       <workItem from="1712278643522" duration="211000" />
       <workItem from="1712278862950" duration="1170000" />
       <workItem from="1712367449714" duration="20000" />
-      <workItem from="1713198018675" duration="5443000" />
+      <workItem from="1713198018675" duration="5684000" />
+      <workItem from="1713205440762" duration="19000" />
+      <workItem from="1713205635176" duration="162000" />
+      <workItem from="1713375824825" duration="25000" />
+      <workItem from="1713489275107" duration="2917000" />
     </task>
     <task id="LOCAL-00001" summary="Moved print_header calls directly inside class functions. Refactored attribute and function names.">
       <option name="closed" value="true" />
@@ -514,7 +518,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712279811445</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Completed assignment 11">
+      <option name="closed" value="true" />
+      <created>1713205221970</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713205221970</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Completed assignment 11">
+      <option name="closed" value="true" />
+      <created>1713205228154</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1713205228154</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +552,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="edited readme" />
     <MESSAGE value="optimized pascal algorithm and added comments to main script" />
     <MESSAGE value="Refactored files and directory" />
     <MESSAGE value="Removed Dependencies" />
@@ -557,7 +576,8 @@
     <MESSAGE value="Added documentation." />
     <MESSAGE value="Added functionality" />
     <MESSAGE value="Lab10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab10" />
+    <MESSAGE value="Completed assignment 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed assignment 11" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/B210$main.coverage" NAME="main Coverage Results" MODIFIED="1713202237653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment11/Q2" />
