@@ -4,6 +4,11 @@
 
 - `csv`: Used to aid in the manipulation of CSV and TSV files.
 
+## Important Note:
+Due to the file size of`CompleteData.csv`, uploading it to GitHub, which has a file size restriction, is impossible. With
+this information in mind, please drop a copy of `CompleteData.csv` into the same directory as `main.py`. Failure to do
+so will render the script inoperable.
+
 ## Purpose:
 
 The purpose of this program is to analyze airport data to determine the most popular departing and arriving cities based
