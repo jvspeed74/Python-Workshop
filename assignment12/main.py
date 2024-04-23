@@ -79,10 +79,9 @@ def get_input() -> int:
             
             # Check if input is negative
             if validated_input < 1:
-                ValueError("Please enter a non-zero positive integer.")
+                raise ValueError("Please enter a non-zero positive integer.")
             
             return validated_input
-        
         # Catch exceptions
         except ValueError:
             print(f"Invalid number: '{user_input}'. Input must be an integer.")
@@ -147,9 +146,9 @@ def main():
                                  airport_data,
                                  ['City', 'State', 'Number of Arriving Flights'])
     except OSError as e:
-        print(f"There was an error reading a CSV file: {repr(e)}")
+        print(f"There was an error reading a CSV file: {e}")
     except Exception as e:
-        print(f"An error occurred: {repr(e)}")
+        print(f"An error occurred: {e}")
 
 
 main()
